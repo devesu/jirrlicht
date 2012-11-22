@@ -5,160 +5,173 @@
  * Do not make changes to this file unless you know what you are doing--modify
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
-
 package org.swig.jirr;
 
 public class SColor {
-  private long swigCPtr;
-  protected boolean swigCMemOwn;
 
-  protected SColor(long cPtr, boolean cMemoryOwn) {
-    swigCMemOwn = cMemoryOwn;
-    swigCPtr = cPtr;
-  }
+    //Predefined colors
+    public static final SColor RED = new SColor(255, 255, 0, 0);
+    public static final SColor GREEN = new SColor(255, 0, 255, 0);
+    public static final SColor BLUE = new SColor(255, 0, 0, 255);
+    public static final SColor WHITE = new SColor(255, 255, 255, 255);
+    public static final SColor GRAY = new SColor(255, 127, 127, 127);
+    public static final SColor BLACK = new SColor(255, 0, 0, 0);
+    
+    public static final SColor RED_L = new SColor(255, 255, 127, 127);
+    public static final SColor GREEN_L = new SColor(255, 127, 255, 127);
+    public static final SColor BLUE_L = new SColor(255, 127, 127, 255);
+    
+    private long swigCPtr;
+    protected boolean swigCMemOwn;
 
-  protected static long getCPtr(SColor obj) {
-    return (obj == null) ? 0 : obj.swigCPtr;
-  }
-
-  protected void finalize() {
-    delete();
-  }
-
-  public synchronized void delete() {
-    if (swigCPtr != 0) {
-      if (swigCMemOwn) {
-        swigCMemOwn = false;
-        JirrJNI.delete_SColor(swigCPtr);
-      }
-      swigCPtr = 0;
+    protected SColor(long cPtr, boolean cMemoryOwn) {
+        swigCMemOwn = cMemoryOwn;
+        swigCPtr = cPtr;
     }
-  }
 
-  protected static long[] cArrayUnwrap(SColor[] arrayWrapper) {
-      long[] cArray = new long[arrayWrapper.length];
-      for (int i=0; i<arrayWrapper.length; i++)
-        cArray[i] = SColor.getCPtr(arrayWrapper[i]);
-      return cArray;
-  }
+    protected static long getCPtr(SColor obj) {
+        return (obj == null) ? 0 : obj.swigCPtr;
+    }
 
-  protected static SColor[] cArrayWrap(long[] cArray, boolean cMemoryOwn) {
-    SColor[] arrayWrapper = new SColor[cArray.length];
-    for (int i=0; i<cArray.length; i++)
-      arrayWrapper[i] = new SColor(cArray[i], cMemoryOwn);
-    return arrayWrapper;
-  }
+    protected void finalize() {
+        delete();
+    }
 
-  public SColor() {
-    this(JirrJNI.new_SColor__SWIG_0(), true);
-  }
+    public synchronized void delete() {
+        if (swigCPtr != 0) {
+            if (swigCMemOwn) {
+                swigCMemOwn = false;
+                JirrJNI.delete_SColor(swigCPtr);
+            }
+            swigCPtr = 0;
+        }
+    }
 
-  public SColor(long a, long r, long g, long b) {
-    this(JirrJNI.new_SColor__SWIG_1(a, r, g, b), true);
-  }
+    protected static long[] cArrayUnwrap(SColor[] arrayWrapper) {
+        long[] cArray = new long[arrayWrapper.length];
+        for (int i = 0; i < arrayWrapper.length; i++) {
+            cArray[i] = SColor.getCPtr(arrayWrapper[i]);
+        }
+        return cArray;
+    }
 
-  public SColor(long clr) {
-    this(JirrJNI.new_SColor__SWIG_2(clr), true);
-  }
+    protected static SColor[] cArrayWrap(long[] cArray, boolean cMemoryOwn) {
+        SColor[] arrayWrapper = new SColor[cArray.length];
+        for (int i = 0; i < cArray.length; i++) {
+            arrayWrapper[i] = new SColor(cArray[i], cMemoryOwn);
+        }
+        return arrayWrapper;
+    }
 
-  public long getAlpha() {
-    return JirrJNI.SColor_getAlpha(swigCPtr, this);
-  }
+    public SColor() {
+        this(JirrJNI.new_SColor__SWIG_0(), true);
+    }
 
-  public long getRed() {
-    return JirrJNI.SColor_getRed(swigCPtr, this);
-  }
+    public SColor(long a, long r, long g, long b) {
+        this(JirrJNI.new_SColor__SWIG_1(a, r, g, b), true);
+    }
 
-  public long getGreen() {
-    return JirrJNI.SColor_getGreen(swigCPtr, this);
-  }
+    public SColor(long clr) {
+        this(JirrJNI.new_SColor__SWIG_2(clr), true);
+    }
 
-  public long getBlue() {
-    return JirrJNI.SColor_getBlue(swigCPtr, this);
-  }
+    public long getAlpha() {
+        return JirrJNI.SColor_getAlpha(swigCPtr, this);
+    }
 
-  public float getLightness() {
-    return JirrJNI.SColor_getLightness(swigCPtr, this);
-  }
+    public long getRed() {
+        return JirrJNI.SColor_getRed(swigCPtr, this);
+    }
 
-  public float getLuminance() {
-    return JirrJNI.SColor_getLuminance(swigCPtr, this);
-  }
+    public long getGreen() {
+        return JirrJNI.SColor_getGreen(swigCPtr, this);
+    }
 
-  public long getAverage() {
-    return JirrJNI.SColor_getAverage(swigCPtr, this);
-  }
+    public long getBlue() {
+        return JirrJNI.SColor_getBlue(swigCPtr, this);
+    }
 
-  public void setAlpha(long a) {
-    JirrJNI.SColor_setAlpha(swigCPtr, this, a);
-  }
+    public float getLightness() {
+        return JirrJNI.SColor_getLightness(swigCPtr, this);
+    }
 
-  public void setRed(long r) {
-    JirrJNI.SColor_setRed(swigCPtr, this, r);
-  }
+    public float getLuminance() {
+        return JirrJNI.SColor_getLuminance(swigCPtr, this);
+    }
 
-  public void setGreen(long g) {
-    JirrJNI.SColor_setGreen(swigCPtr, this, g);
-  }
+    public long getAverage() {
+        return JirrJNI.SColor_getAverage(swigCPtr, this);
+    }
 
-  public void setBlue(long b) {
-    JirrJNI.SColor_setBlue(swigCPtr, this, b);
-  }
+    public void setAlpha(long a) {
+        JirrJNI.SColor_setAlpha(swigCPtr, this, a);
+    }
 
-  public int toA1R5G5B5() {
-    return JirrJNI.SColor_toA1R5G5B5(swigCPtr, this);
-  }
+    public void setRed(long r) {
+        JirrJNI.SColor_setRed(swigCPtr, this, r);
+    }
 
-  public void toOpenGLColor(SWIGTYPE_p_unsigned_char dest) {
-    JirrJNI.SColor_toOpenGLColor(swigCPtr, this, SWIGTYPE_p_unsigned_char.getCPtr(dest));
-  }
+    public void setGreen(long g) {
+        JirrJNI.SColor_setGreen(swigCPtr, this, g);
+    }
 
-  public void set(long a, long r, long g, long b) {
-    JirrJNI.SColor_set__SWIG_0(swigCPtr, this, a, r, g, b);
-  }
+    public void setBlue(long b) {
+        JirrJNI.SColor_setBlue(swigCPtr, this, b);
+    }
 
-  public void set(long col) {
-    JirrJNI.SColor_set__SWIG_1(swigCPtr, this, col);
-  }
+    public int toA1R5G5B5() {
+        return JirrJNI.SColor_toA1R5G5B5(swigCPtr, this);
+    }
 
-  public boolean equalsOperator(SColor other) {
-    return JirrJNI.SColor_equalsOperator(swigCPtr, this, SColor.getCPtr(other), other);
-  }
+    public void toOpenGLColor(SWIGTYPE_p_unsigned_char dest) {
+        JirrJNI.SColor_toOpenGLColor(swigCPtr, this, SWIGTYPE_p_unsigned_char.getCPtr(dest));
+    }
 
-  public boolean notEqualsOperator(SColor other) {
-    return JirrJNI.SColor_notEqualsOperator(swigCPtr, this, SColor.getCPtr(other), other);
-  }
+    public void set(long a, long r, long g, long b) {
+        JirrJNI.SColor_set__SWIG_0(swigCPtr, this, a, r, g, b);
+    }
 
-  public boolean lessThanOperator(SColor other) {
-    return JirrJNI.SColor_lessThanOperator(swigCPtr, this, SColor.getCPtr(other), other);
-  }
+    public void set(long col) {
+        JirrJNI.SColor_set__SWIG_1(swigCPtr, this, col);
+    }
 
-  public SColor addOperator(SColor other) {
-    return new SColor(JirrJNI.SColor_addOperator(swigCPtr, this, SColor.getCPtr(other), other), true);
-  }
+    public boolean equalsOperator(SColor other) {
+        return JirrJNI.SColor_equalsOperator(swigCPtr, this, SColor.getCPtr(other), other);
+    }
 
-  public SColor getInterpolated(SColor other, float d) {
-    return new SColor(JirrJNI.SColor_getInterpolated(swigCPtr, this, SColor.getCPtr(other), other, d), true);
-  }
+    public boolean notEqualsOperator(SColor other) {
+        return JirrJNI.SColor_notEqualsOperator(swigCPtr, this, SColor.getCPtr(other), other);
+    }
 
-  public SColor getInterpolated_quadratic(SColor c1, SColor c2, float d) {
-    return new SColor(JirrJNI.SColor_getInterpolated_quadratic(swigCPtr, this, SColor.getCPtr(c1), c1, SColor.getCPtr(c2), c2, d), true);
-  }
+    public boolean lessThanOperator(SColor other) {
+        return JirrJNI.SColor_lessThanOperator(swigCPtr, this, SColor.getCPtr(other), other);
+    }
 
-  public void setData(SWIGTYPE_p_void data, ECOLOR_FORMAT format) {
-    JirrJNI.SColor_setData(swigCPtr, this, SWIGTYPE_p_void.getCPtr(data), format.swigValue());
-  }
+    public SColor addOperator(SColor other) {
+        return new SColor(JirrJNI.SColor_addOperator(swigCPtr, this, SColor.getCPtr(other), other), true);
+    }
 
-  public void getData(SWIGTYPE_p_void data, ECOLOR_FORMAT format) {
-    JirrJNI.SColor_getData(swigCPtr, this, SWIGTYPE_p_void.getCPtr(data), format.swigValue());
-  }
+    public SColor getInterpolated(SColor other, float d) {
+        return new SColor(JirrJNI.SColor_getInterpolated(swigCPtr, this, SColor.getCPtr(other), other, d), true);
+    }
 
-  public void setColor(long value) {
-    JirrJNI.SColor_color_set(swigCPtr, this, value);
-  }
+    public SColor getInterpolated_quadratic(SColor c1, SColor c2, float d) {
+        return new SColor(JirrJNI.SColor_getInterpolated_quadratic(swigCPtr, this, SColor.getCPtr(c1), c1, SColor.getCPtr(c2), c2, d), true);
+    }
 
-  public long getColor() {
-    return JirrJNI.SColor_color_get(swigCPtr, this);
-  }
+    public void setData(SWIGTYPE_p_void data, ECOLOR_FORMAT format) {
+        JirrJNI.SColor_setData(swigCPtr, this, SWIGTYPE_p_void.getCPtr(data), format.swigValue());
+    }
 
+    public void getData(SWIGTYPE_p_void data, ECOLOR_FORMAT format) {
+        JirrJNI.SColor_getData(swigCPtr, this, SWIGTYPE_p_void.getCPtr(data), format.swigValue());
+    }
+
+    public void setColor(long value) {
+        JirrJNI.SColor_color_set(swigCPtr, this, value);
+    }
+
+    public long getColor() {
+        return JirrJNI.SColor_color_get(swigCPtr, this);
+    }
 }

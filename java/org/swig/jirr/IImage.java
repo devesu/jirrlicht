@@ -163,5 +163,4 @@ public class IImage {
   public static boolean isRenderTargetOnlyFormat(ECOLOR_FORMAT format) {
     return JirrJNI.IImage_isRenderTargetOnlyFormat(format.swigValue());
   }
-
 }

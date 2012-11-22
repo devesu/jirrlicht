@@ -39,8 +39,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Program Files %28x86%29\Java\jdk1.7.0_03\include\win32;C:\Program Files %28x86%29\Java\jdk1.7.0_03\include;D:\install\irrlicht\irrlicht-1.8\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\install\irrlicht\irrlicht-1.8\lib\Win32-visualstudio;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Program Files %28x86%29\Java\jdk1.7.0_01\include\win32;C:\Program Files %28x86%29\Java\jdk1.7.0_01\include;F:\install\irrlicht\irrlicht-1.8\include;$(IncludePath)</IncludePath>
+    <LibraryPath>F:\install\irrlicht\irrlicht-1.8\lib\Win32-visualstudio;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>

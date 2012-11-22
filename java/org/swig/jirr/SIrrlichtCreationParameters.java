@@ -63,13 +63,13 @@ public class SIrrlichtCreationParameters {
     return E_DRIVER_TYPE.swigToEnum(JirrJNI.SIrrlichtCreationParameters_DriverType_get(swigCPtr, this));
   }
 
-  public void setWindowSize(SWIGTYPE_p_irr__core__dimension2dT_unsigned_int_t value) {
-    JirrJNI.SIrrlichtCreationParameters_WindowSize_set(swigCPtr, this, SWIGTYPE_p_irr__core__dimension2dT_unsigned_int_t.getCPtr(value));
+  public void setWindowSize(dimension2di value) {
+    JirrJNI.SIrrlichtCreationParameters_WindowSize_set(swigCPtr, this, dimension2di.getCPtr(value));
   }
 
-  public SWIGTYPE_p_irr__core__dimension2dT_unsigned_int_t getWindowSize() {
+  public dimension2di getWindowSize() {
     long cPtr = JirrJNI.SIrrlichtCreationParameters_WindowSize_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_irr__core__dimension2dT_unsigned_int_t(cPtr, false);
+    return (cPtr == 0) ? null : new dimension2di(cPtr, false);
   }
 
   public void setBits(short value) {
@@ -177,13 +177,13 @@ public class SIrrlichtCreationParameters {
     return (cPtr == 0) ? null : new IEventReceiver(cPtr, false);
   }
 
-  public void setWindowId(SWIGTYPE_p_void value) {
-    JirrJNI.SIrrlichtCreationParameters_WindowId_set(swigCPtr, this, SWIGTYPE_p_void.getCPtr(value));
+  public void setWindowId(long hwnd) {
+    JirrJNI.SIrrlichtCreationParameters_WindowId_set(swigCPtr, this, hwnd);
   }
 
-  public SWIGTYPE_p_void getWindowId() {
-    long cPtr = JirrJNI.SIrrlichtCreationParameters_WindowId_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_void(cPtr, false);
+  public long getWindowId() {
+    long hwnd = JirrJNI.SIrrlichtCreationParameters_WindowId_get(swigCPtr, this);
+    return (hwnd == 0) ? null : hwnd;
   }
 
   public void setLoggingLevel(ELOG_LEVEL value) {
