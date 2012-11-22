@@ -105,16 +105,16 @@ public class IGUIEditBox extends IGUIElement {
     return JirrJNI.IGUIEditBox_isAutoScrollEnabled(swigCPtr, this);
   }
 
-  public void setPasswordBox(boolean passwordBox, SWIGTYPE_p_wchar_t passwordChar) {
-    JirrJNI.IGUIEditBox_setPasswordBox(swigCPtr, this, passwordBox, SWIGTYPE_p_wchar_t.getCPtr(passwordChar));
+  public void setPasswordBox(boolean passwordBox, char passwordChar) {
+    JirrJNI.IGUIEditBox_setPasswordBox(swigCPtr, this, passwordBox, passwordChar);
   }
 
   public boolean isPasswordBox() {
     return JirrJNI.IGUIEditBox_isPasswordBox(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_irr__core__dimension2dT_unsigned_int_t getTextDimension() {
-    return new SWIGTYPE_p_irr__core__dimension2dT_unsigned_int_t(JirrJNI.IGUIEditBox_getTextDimension(swigCPtr, this), true);
+  public dimension2di getTextDimension() {
+    return new dimension2di(JirrJNI.IGUIEditBox_getTextDimension(swigCPtr, this), true);
   }
 
   public void setMax(long max) {

@@ -1564,7 +1564,7 @@ public class JirrJNI {
   public final static native boolean IGUIEditBox_isMultiLineEnabled(long jarg1, IGUIEditBox jarg1_);
   public final static native void IGUIEditBox_setAutoScroll(long jarg1, IGUIEditBox jarg1_, boolean jarg2);
   public final static native boolean IGUIEditBox_isAutoScrollEnabled(long jarg1, IGUIEditBox jarg1_);
-  public final static native void IGUIEditBox_setPasswordBox(long jarg1, IGUIEditBox jarg1_, boolean jarg2, long jarg3);
+  public final static native void IGUIEditBox_setPasswordBox(long jarg1, IGUIEditBox jarg1_, boolean jarg2, char jarg3);
   public final static native boolean IGUIEditBox_isPasswordBox(long jarg1, IGUIEditBox jarg1_);
   public final static native long IGUIEditBox_getTextDimension(long jarg1, IGUIEditBox jarg1_);
   public final static native void IGUIEditBox_setMax(long jarg1, IGUIEditBox jarg1_, long jarg2);
@@ -2449,6 +2449,14 @@ public class JirrJNI {
   public final static native void delete_IVideoModeList(long jarg1);
   public final static native long ITimer_getRealTime(long jarg1, ITimer jarg1_);
   public final static native long ITimer_getRealTimeAndDate(long jarg1, ITimer jarg1_);
+  public final static native long ITimer_getRealTimeAndDateDay(long pointer);
+  public final static native long ITimer_getRealTimeAndDateMonth(long pointer);
+  public final static native long ITimer_getRealTimeAndDateYear(long pointer);
+  public final static native long ITimer_getRealTimeAndDateHour(long pointer);
+  public final static native long ITimer_getRealTimeAndDateMinute(long pointer);
+  public final static native long ITimer_getRealTimeAndDateSecond(long pointer);
+  public final static native boolean ITimer_getRealTimeAndDateIsDST(long pointer);
+  
   public final static native long ITimer_getTime(long jarg1, ITimer jarg1_);
   public final static native void ITimer_setTime(long jarg1, ITimer jarg1_, long jarg2);
   public final static native void ITimer_stop(long jarg1, ITimer jarg1_);
