@@ -12778,24 +12778,15 @@ SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_IMesh_1setBoundingBox(JNIEnv 
 }
 
 
-SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_IMesh_1setMaterialFlag(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jboolean jarg3) {
-  irr::scene::IMesh *arg1 = (irr::scene::IMesh *) 0 ;
-  irr::video::E_MATERIAL_FLAG arg2 ;
-  bool arg3 ;
-  irr::video::E_MATERIAL_FLAG *argp2 ;
+SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_IMesh_1setMaterialFlag(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong flag, jboolean state) {
+	irr::scene::IMesh *arg1 = (irr::scene::IMesh *) 0 ;
+  irr::video::E_MATERIAL_FLAG arg2;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(irr::scene::IMesh **)&jarg1; 
-  argp2 = *(irr::video::E_MATERIAL_FLAG **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null irr::video::E_MATERIAL_FLAG");
-    return ;
-  }
-  arg2 = *argp2; 
-  arg3 = jarg3 ? true : false; 
-  (arg1)->setMaterialFlag(arg2,arg3);
+  (arg1)->setMaterialFlag((E_MATERIAL_FLAG)flag,state);
 }
 
 
@@ -27066,24 +27057,23 @@ SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_ISceneNode_1getMaterialCount
 }
 
 
-SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_ISceneNode_1setMaterialFlag(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jboolean jarg3) {
-  irr::scene::ISceneNode *arg1 = (irr::scene::ISceneNode *) 0 ;
+SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_ISceneNode_1setMaterialFlag(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject object, jlong flag, jboolean state) {
+  fprintf(stderr,"111\n");
+	irr::scene::ISceneNode *arg1 = (irr::scene::ISceneNode *) 0 ;
   irr::video::E_MATERIAL_FLAG arg2 ;
   bool arg3 ;
   irr::video::E_MATERIAL_FLAG *argp2 ;
   
   (void)jenv;
   (void)jcls;
-  (void)jarg1_;
+  fprintf(stderr,"2222\n");
   arg1 = *(irr::scene::ISceneNode **)&jarg1; 
-  argp2 = *(irr::video::E_MATERIAL_FLAG **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null irr::video::E_MATERIAL_FLAG");
-    return ;
-  }
-  arg2 = *argp2; 
-  arg3 = jarg3 ? true : false; 
-  (arg1)->setMaterialFlag(arg2,arg3);
+  fprintf(stderr,"3333\n");
+  fprintf(stderr,"55555\n");
+  fprintf(stderr,"66666\n");
+  fprintf(stderr,"7777\n");
+  (arg1)->setMaterialFlag((E_MATERIAL_FLAG)flag,state);
+  fprintf(stderr,"88888\n");
 }
 
 
@@ -64070,37 +64060,14 @@ SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_SAnimatedMesh_1getMeshBuffer
   return jresult;
 }
 
-void pr(FILE*f, char*message){
-	fprintf(f, "%s\n",message);
-	fflush(f);
-}
-
-SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_SAnimatedMesh_1setMaterialFlag(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jboolean jarg3) {
-  FILE*f=fopen("D:\\debug.txt","w");
-  pr(f,"1");
-  irr::scene::SAnimatedMesh *arg1 = (irr::scene::SAnimatedMesh *) 0 ;
-  irr::video::E_MATERIAL_FLAG arg2 ;
+SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_SAnimatedMesh_1setMaterialFlag(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong flag, jboolean state) {
+	irr::scene::SAnimatedMesh *arg1 = (irr::scene::SAnimatedMesh *) 0 ;
   bool arg3 ;
-  irr::video::E_MATERIAL_FLAG *argp2 ;
-  pr(f,"2");
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(irr::scene::SAnimatedMesh **)&jarg1; 
-  pr(f,"3");
-  argp2 = *(irr::video::E_MATERIAL_FLAG **)&jarg2; 
-  pr(f,"4");
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null irr::video::E_MATERIAL_FLAG");
-    return ;
-  }
-  pr(f,"5");
-  arg2 = *argp2; 
-  arg3 = jarg3 ? true : false; 
-  pr(f,"6");
-  (arg1)->setMaterialFlag((E_MATERIAL_FLAG)jarg2,arg3);
-  pr(f,"7");
-  fclose(f);
+  (arg1)->setMaterialFlag((E_MATERIAL_FLAG)flag,state);
 }
 
 
@@ -64439,24 +64406,16 @@ SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_SMesh_1addMeshBuffer(JNIEnv *
 }
 
 
-SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_SMesh_1setMaterialFlag(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jboolean jarg3) {
-  irr::scene::SMesh *arg1 = (irr::scene::SMesh *) 0 ;
+SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_SMesh_1setMaterialFlag(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong flag, jboolean state) {
+	irr::scene::SMesh *arg1 = (irr::scene::SMesh *) 0 ;
   irr::video::E_MATERIAL_FLAG arg2 ;
   bool arg3 ;
-  irr::video::E_MATERIAL_FLAG *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(irr::scene::SMesh **)&jarg1; 
-  argp2 = *(irr::video::E_MATERIAL_FLAG **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null irr::video::E_MATERIAL_FLAG");
-    return ;
-  }
-  arg2 = *argp2; 
-  arg3 = jarg3 ? true : false; 
-  (arg1)->setMaterialFlag(arg2,arg3);
+  (arg1)->setMaterialFlag((E_MATERIAL_FLAG)flag,state);
 }
 
 
