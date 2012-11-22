@@ -80,11 +80,19 @@ public class ISceneNode extends IAttributeExchangingObject {
   }
 
   public void OnRegisterSceneNode() {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_OnRegisterSceneNode(swigCPtr, this); else JirrJNI.ISceneNode_OnRegisterSceneNodeSwigExplicitISceneNode(swigCPtr, this);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_OnRegisterSceneNode(swigCPtr, this);
+        } else {
+            JirrJNI.ISceneNode_OnRegisterSceneNodeSwigExplicitISceneNode(swigCPtr, this);
+        }
   }
 
   public void OnAnimate(long timeMs) {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_OnAnimate(swigCPtr, this, timeMs); else JirrJNI.ISceneNode_OnAnimateSwigExplicitISceneNode(swigCPtr, this, timeMs);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_OnAnimate(swigCPtr, this, timeMs);
+        } else {
+            JirrJNI.ISceneNode_OnAnimateSwigExplicitISceneNode(swigCPtr, this, timeMs);
+        }
   }
 
   public void render() {
@@ -128,7 +136,11 @@ public class ISceneNode extends IAttributeExchangingObject {
   }
 
   public void setVisible(boolean isVisible) {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_setVisible(swigCPtr, this, isVisible); else JirrJNI.ISceneNode_setVisibleSwigExplicitISceneNode(swigCPtr, this, isVisible);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_setVisible(swigCPtr, this, isVisible);
+        } else {
+            JirrJNI.ISceneNode_setVisibleSwigExplicitISceneNode(swigCPtr, this, isVisible);
+        }
   }
 
   public int getID() {
@@ -136,11 +148,19 @@ public class ISceneNode extends IAttributeExchangingObject {
   }
 
   public void setID(int id) {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_setID(swigCPtr, this, id); else JirrJNI.ISceneNode_setIDSwigExplicitISceneNode(swigCPtr, this, id);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_setID(swigCPtr, this, id);
+        } else {
+            JirrJNI.ISceneNode_setIDSwigExplicitISceneNode(swigCPtr, this, id);
+        }
   }
 
   public void addChild(ISceneNode child) {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_addChild(swigCPtr, this, ISceneNode.getCPtr(child), child); else JirrJNI.ISceneNode_addChildSwigExplicitISceneNode(swigCPtr, this, ISceneNode.getCPtr(child), child);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_addChild(swigCPtr, this, ISceneNode.getCPtr(child), child);
+        } else {
+            JirrJNI.ISceneNode_addChildSwigExplicitISceneNode(swigCPtr, this, ISceneNode.getCPtr(child), child);
+        }
   }
 
   public boolean removeChild(ISceneNode child) {
@@ -148,15 +168,27 @@ public class ISceneNode extends IAttributeExchangingObject {
   }
 
   public void removeAll() {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_removeAll(swigCPtr, this); else JirrJNI.ISceneNode_removeAllSwigExplicitISceneNode(swigCPtr, this);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_removeAll(swigCPtr, this);
+        } else {
+            JirrJNI.ISceneNode_removeAllSwigExplicitISceneNode(swigCPtr, this);
+        }
   }
 
   public void remove() {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_remove(swigCPtr, this); else JirrJNI.ISceneNode_removeSwigExplicitISceneNode(swigCPtr, this);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_remove(swigCPtr, this);
+        } else {
+            JirrJNI.ISceneNode_removeSwigExplicitISceneNode(swigCPtr, this);
+        }
   }
 
   public void addAnimator(ISceneNodeAnimator animator) {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_addAnimator(swigCPtr, this, ISceneNodeAnimator.getCPtr(animator), animator); else JirrJNI.ISceneNode_addAnimatorSwigExplicitISceneNode(swigCPtr, this, ISceneNodeAnimator.getCPtr(animator), animator);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_addAnimator(swigCPtr, this, ISceneNodeAnimator.getCPtr(animator), animator);
+        } else {
+            JirrJNI.ISceneNode_addAnimatorSwigExplicitISceneNode(swigCPtr, this, ISceneNodeAnimator.getCPtr(animator), animator);
+        }
   }
 
   public SWIGTYPE_p_irr__core__listT_irr__scene__ISceneNodeAnimator_p_t getAnimators() {
@@ -164,11 +196,19 @@ public class ISceneNode extends IAttributeExchangingObject {
   }
 
   public void removeAnimator(ISceneNodeAnimator animator) {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_removeAnimator(swigCPtr, this, ISceneNodeAnimator.getCPtr(animator), animator); else JirrJNI.ISceneNode_removeAnimatorSwigExplicitISceneNode(swigCPtr, this, ISceneNodeAnimator.getCPtr(animator), animator);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_removeAnimator(swigCPtr, this, ISceneNodeAnimator.getCPtr(animator), animator);
+        } else {
+            JirrJNI.ISceneNode_removeAnimatorSwigExplicitISceneNode(swigCPtr, this, ISceneNodeAnimator.getCPtr(animator), animator);
+        }
   }
 
   public void removeAnimators() {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_removeAnimators(swigCPtr, this); else JirrJNI.ISceneNode_removeAnimatorsSwigExplicitISceneNode(swigCPtr, this);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_removeAnimators(swigCPtr, this);
+        } else {
+            JirrJNI.ISceneNode_removeAnimatorsSwigExplicitISceneNode(swigCPtr, this);
+        }
   }
 
   public SMaterial getMaterial(long num) {
@@ -197,7 +237,11 @@ public class ISceneNode extends IAttributeExchangingObject {
   }
 
   public void setScale(vector3df scale) {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_setScale(swigCPtr, this, vector3df.getCPtr(scale), scale); else JirrJNI.ISceneNode_setScaleSwigExplicitISceneNode(swigCPtr, this, vector3df.getCPtr(scale), scale);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_setScale(swigCPtr, this, vector3df.getCPtr(scale), scale);
+        } else {
+            JirrJNI.ISceneNode_setScaleSwigExplicitISceneNode(swigCPtr, this, vector3df.getCPtr(scale), scale);
+        }
   }
 
   public vector3df getRotation() {
@@ -205,7 +249,11 @@ public class ISceneNode extends IAttributeExchangingObject {
   }
 
   public void setRotation(vector3df rotation) {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_setRotation(swigCPtr, this, vector3df.getCPtr(rotation), rotation); else JirrJNI.ISceneNode_setRotationSwigExplicitISceneNode(swigCPtr, this, vector3df.getCPtr(rotation), rotation);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_setRotation(swigCPtr, this, vector3df.getCPtr(rotation), rotation);
+        } else {
+            JirrJNI.ISceneNode_setRotationSwigExplicitISceneNode(swigCPtr, this, vector3df.getCPtr(rotation), rotation);
+        }
   }
 
   public vector3df getPosition() {
@@ -213,7 +261,11 @@ public class ISceneNode extends IAttributeExchangingObject {
   }
 
   public void setPosition(vector3df newpos) {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_setPosition(swigCPtr, this, vector3df.getCPtr(newpos), newpos); else JirrJNI.ISceneNode_setPositionSwigExplicitISceneNode(swigCPtr, this, vector3df.getCPtr(newpos), newpos);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_setPosition(swigCPtr, this, vector3df.getCPtr(newpos), newpos);
+        } else {
+            JirrJNI.ISceneNode_setPositionSwigExplicitISceneNode(swigCPtr, this, vector3df.getCPtr(newpos), newpos);
+        }
   }
 
   public vector3df getAbsolutePosition() {
@@ -229,7 +281,11 @@ public class ISceneNode extends IAttributeExchangingObject {
   }
 
   public void setDebugDataVisible(long state) {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_setDebugDataVisible(swigCPtr, this, state); else JirrJNI.ISceneNode_setDebugDataVisibleSwigExplicitISceneNode(swigCPtr, this, state);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_setDebugDataVisible(swigCPtr, this, state);
+        } else {
+            JirrJNI.ISceneNode_setDebugDataVisibleSwigExplicitISceneNode(swigCPtr, this, state);
+        }
   }
 
   public long isDebugDataVisible() {
@@ -249,7 +305,11 @@ public class ISceneNode extends IAttributeExchangingObject {
   }
 
   public void setParent(ISceneNode newParent) {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_setParent(swigCPtr, this, ISceneNode.getCPtr(newParent), newParent); else JirrJNI.ISceneNode_setParentSwigExplicitISceneNode(swigCPtr, this, ISceneNode.getCPtr(newParent), newParent);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_setParent(swigCPtr, this, ISceneNode.getCPtr(newParent), newParent);
+        } else {
+            JirrJNI.ISceneNode_setParentSwigExplicitISceneNode(swigCPtr, this, ISceneNode.getCPtr(newParent), newParent);
+        }
   }
 
   public ITriangleSelector getTriangleSelector() {
@@ -258,11 +318,19 @@ public class ISceneNode extends IAttributeExchangingObject {
   }
 
   public void setTriangleSelector(ITriangleSelector selector) {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_setTriangleSelector(swigCPtr, this, ITriangleSelector.getCPtr(selector), selector); else JirrJNI.ISceneNode_setTriangleSelectorSwigExplicitISceneNode(swigCPtr, this, ITriangleSelector.getCPtr(selector), selector);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_setTriangleSelector(swigCPtr, this, ITriangleSelector.getCPtr(selector), selector);
+        } else {
+            JirrJNI.ISceneNode_setTriangleSelectorSwigExplicitISceneNode(swigCPtr, this, ITriangleSelector.getCPtr(selector), selector);
+        }
   }
 
   public void updateAbsolutePosition() {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_updateAbsolutePosition(swigCPtr, this); else JirrJNI.ISceneNode_updateAbsolutePositionSwigExplicitISceneNode(swigCPtr, this);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_updateAbsolutePosition(swigCPtr, this);
+        } else {
+            JirrJNI.ISceneNode_updateAbsolutePositionSwigExplicitISceneNode(swigCPtr, this);
+        }
   }
 
   public ISceneNode getParent() {
@@ -274,20 +342,40 @@ public class ISceneNode extends IAttributeExchangingObject {
     return ESCENE_NODE_TYPE.swigToEnum((getClass() == ISceneNode.class) ? JirrJNI.ISceneNode_getType(swigCPtr, this) : JirrJNI.ISceneNode_getTypeSwigExplicitISceneNode(swigCPtr, this));
   }
 
+    @Override
   public void serializeAttributes(IAttributes out, SAttributeReadWriteOptions options) {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_serializeAttributes__SWIG_0(swigCPtr, this, IAttributes.getCPtr(out), out, SAttributeReadWriteOptions.getCPtr(options), options); else JirrJNI.ISceneNode_serializeAttributesSwigExplicitISceneNode__SWIG_0(swigCPtr, this, IAttributes.getCPtr(out), out, SAttributeReadWriteOptions.getCPtr(options), options);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_serializeAttributes__SWIG_0(swigCPtr, this, IAttributes.getCPtr(out), out, SAttributeReadWriteOptions.getCPtr(options), options);
+        } else {
+            JirrJNI.ISceneNode_serializeAttributesSwigExplicitISceneNode__SWIG_0(swigCPtr, this, IAttributes.getCPtr(out), out, SAttributeReadWriteOptions.getCPtr(options), options);
+        }
   }
 
+    @Override
   public void serializeAttributes(IAttributes out) {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_serializeAttributes__SWIG_1(swigCPtr, this, IAttributes.getCPtr(out), out); else JirrJNI.ISceneNode_serializeAttributesSwigExplicitISceneNode__SWIG_1(swigCPtr, this, IAttributes.getCPtr(out), out);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_serializeAttributes__SWIG_1(swigCPtr, this, IAttributes.getCPtr(out), out);
+        } else {
+            JirrJNI.ISceneNode_serializeAttributesSwigExplicitISceneNode__SWIG_1(swigCPtr, this, IAttributes.getCPtr(out), out);
+        }
   }
 
+    @Override
   public void deserializeAttributes(IAttributes in, SAttributeReadWriteOptions options) {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_deserializeAttributes__SWIG_0(swigCPtr, this, IAttributes.getCPtr(in), in, SAttributeReadWriteOptions.getCPtr(options), options); else JirrJNI.ISceneNode_deserializeAttributesSwigExplicitISceneNode__SWIG_0(swigCPtr, this, IAttributes.getCPtr(in), in, SAttributeReadWriteOptions.getCPtr(options), options);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_deserializeAttributes__SWIG_0(swigCPtr, this, IAttributes.getCPtr(in), in, SAttributeReadWriteOptions.getCPtr(options), options);
+        } else {
+            JirrJNI.ISceneNode_deserializeAttributesSwigExplicitISceneNode__SWIG_0(swigCPtr, this, IAttributes.getCPtr(in), in, SAttributeReadWriteOptions.getCPtr(options), options);
+        }
   }
 
+    @Override
   public void deserializeAttributes(IAttributes in) {
-    if (getClass() == ISceneNode.class) JirrJNI.ISceneNode_deserializeAttributes__SWIG_1(swigCPtr, this, IAttributes.getCPtr(in), in); else JirrJNI.ISceneNode_deserializeAttributesSwigExplicitISceneNode__SWIG_1(swigCPtr, this, IAttributes.getCPtr(in), in);
+    if (getClass() == ISceneNode.class) {
+            JirrJNI.ISceneNode_deserializeAttributes__SWIG_1(swigCPtr, this, IAttributes.getCPtr(in), in);
+        } else {
+            JirrJNI.ISceneNode_deserializeAttributesSwigExplicitISceneNode__SWIG_1(swigCPtr, this, IAttributes.getCPtr(in), in);
+        }
   }
 
   public ISceneNode clone(ISceneNode newParent, ISceneManager newManager) {
@@ -300,6 +388,7 @@ public class ISceneNode extends IAttributeExchangingObject {
     return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
   }
 
+    @Override
   public ISceneNode clone() {
     long cPtr = (getClass() == ISceneNode.class) ? JirrJNI.ISceneNode_clone__SWIG_2(swigCPtr, this) : JirrJNI.ISceneNode_cloneSwigExplicitISceneNode__SWIG_2(swigCPtr, this);
     return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
