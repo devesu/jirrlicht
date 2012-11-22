@@ -33703,24 +33703,16 @@ SWIGEXPORT jboolean JNICALL Java_org_swig_jirr_JirrJNI_IGUIEditBox_1isAutoScroll
 }
 
 
-SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_IGUIEditBox_1setPasswordBox(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2, jlong jarg3) {
+SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_IGUIEditBox_1setPasswordBox(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2, jchar jarg3) {
   irr::gui::IGUIEditBox *arg1 = (irr::gui::IGUIEditBox *) 0 ;
   bool arg2 ;
-  wchar_t arg3 ;
-  wchar_t *argp3 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(irr::gui::IGUIEditBox **)&jarg1; 
   arg2 = jarg2 ? true : false; 
-  argp3 = *(wchar_t **)&jarg3; 
-  if (!argp3) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null wchar_t");
-    return ;
-  }
-  arg3 = *argp3; 
-  (arg1)->setPasswordBox(arg2,arg3);
+  (arg1)->setPasswordBox(arg2,jarg3);
 }
 
 
@@ -55802,6 +55794,56 @@ SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_ITimer_1getRealTimeAndDate(J
   return jresult;
 }
 
+SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_ITimer_1getRealTimeAndDateDay(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  irr::ITimer::RealTimeDate*timeDateStruct = (irr::ITimer::RealTimeDate *)jarg1; 
+  jlong day=timeDateStruct->Day;
+  return day;
+}
+
+SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_ITimer_1getRealTimeAndDateMonth(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  irr::ITimer::RealTimeDate*timeDateStruct = (irr::ITimer::RealTimeDate *)jarg1; 
+  jlong month=timeDateStruct->Month;
+  return month;
+}
+
+SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_ITimer_1getRealTimeAndDateYear(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  irr::ITimer::RealTimeDate*timeDateStruct = (irr::ITimer::RealTimeDate *)jarg1; 
+  jlong year=timeDateStruct->Year;
+  return year;
+}
+
+SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_ITimer_1getRealTimeAndDateHour(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  irr::ITimer::RealTimeDate*timeDateStruct = (irr::ITimer::RealTimeDate *)jarg1; 
+  jlong hour=timeDateStruct->Hour;
+  return hour;
+}
+
+SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_ITimer_1getRealTimeAndDateMinute(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  irr::ITimer::RealTimeDate*timeDateStruct = (irr::ITimer::RealTimeDate *)jarg1; 
+  jlong minute=timeDateStruct->Minute;
+  return minute;
+}
+
+SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_ITimer_1getRealTimeAndDateSecond(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  irr::ITimer::RealTimeDate*timeDateStruct = (irr::ITimer::RealTimeDate *)jarg1; 
+  jlong second=timeDateStruct->Second;
+  return second;
+}
+
+
+
+SWIGEXPORT jboolean JNICALL Java_org_swig_jirr_JirrJNI_ITimer_1getRealTimeAndDateIsDST(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  irr::ITimer::RealTimeDate*timeDateStruct = (irr::ITimer::RealTimeDate *)jarg1; 
+  jboolean isDST=timeDateStruct->IsDST;
+  return isDST;
+}
 
 SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_ITimer_1getTime(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;

@@ -39,8 +39,8 @@ public class ITimer {
     return JirrJNI.ITimer_getRealTime(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_irr__ITimer__RealTimeDate getRealTimeAndDate() {
-    return new SWIGTYPE_p_irr__ITimer__RealTimeDate(JirrJNI.ITimer_getRealTimeAndDate(swigCPtr, this), true);
+  public RealTimeDate getRealTimeAndDate() {
+    return new RealTimeDate(JirrJNI.ITimer_getRealTimeAndDate(swigCPtr, this), true);
   }
 
   public long getTime() {
