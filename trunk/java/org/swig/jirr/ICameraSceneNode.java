@@ -64,9 +64,13 @@ public class ICameraSceneNode extends ISceneNode {
   }
 
   public void setTarget(vector3df pos) {
-    JirrJNI.ICameraSceneNode_setTarget(swigCPtr, this, vector3df.getCPtr(pos), pos);
+    if(pos==null){
+        throw new NullPointerException("Position cannot be null");
+    }
+      JirrJNI.ICameraSceneNode_setTarget(swigCPtr, this, vector3df.getCPtr(pos), pos);
   }
 
+    @Override
   public void setRotation(vector3df rotation) {
     JirrJNI.ICameraSceneNode_setRotation(swigCPtr, this, vector3df.getCPtr(rotation), rotation);
   }

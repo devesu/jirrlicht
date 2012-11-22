@@ -287,4 +287,8 @@ public class vector3df {
     return JirrJNI.vector3df_Z_get(swigCPtr, this);
   }
 
+    @Override
+    public String toString() {
+        return String.format("X=%.5f; Y=%.5f; Z=%.5f", getX(), getY(), getZ());
+    }
 }
