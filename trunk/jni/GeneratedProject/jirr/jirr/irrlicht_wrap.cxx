@@ -69432,16 +69432,14 @@ SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_SIrrlichtCreationParameters_
 }
 
 
-SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_SIrrlichtCreationParameters_1WindowId_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_SIrrlichtCreationParameters_1WindowId_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong arg2) {
   irr::SIrrlichtCreationParameters *arg1 = (irr::SIrrlichtCreationParameters *) 0 ;
-  void *arg2 = (void *) 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(irr::SIrrlichtCreationParameters **)&jarg1; 
-  arg2 = *(void **)&jarg2; 
-  if (arg1) (arg1)->WindowId = arg2;
+  if (arg1) (arg1)->WindowId = (void*)arg2;
 }
 
 
@@ -69454,8 +69452,7 @@ SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_SIrrlichtCreationParameters_
   (void)jcls;
   (void)jarg1_;
   arg1 = *(irr::SIrrlichtCreationParameters **)&jarg1; 
-  result = (void *) ((arg1)->WindowId);
-  *(void **)&jresult = result; 
+  jresult = (long)((arg1)->WindowId);
   return jresult;
 }
 

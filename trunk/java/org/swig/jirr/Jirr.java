@@ -806,6 +806,17 @@ public class Jirr implements JirrConstants {
     return JirrJNI.castVoidToInt32Array(SWIGTYPE_p_void.getCPtr(textureLock), dimension2di.getCPtr(dim), dim);
   }
 
+  /**
+   * 
+   * @param deviceType
+   * @param windowSize
+   * @param bits
+   * @param fullscreen
+   * @param stencilbuffer
+   * @param vsync
+   * @param receiver
+   * @return 
+   */
   public static IrrlichtDevice createDevice(E_DRIVER_TYPE deviceType, dimension2di windowSize, long bits, boolean fullscreen, boolean stencilbuffer, boolean vsync, IEventReceiver receiver) {
     long cPtr = JirrJNI.createDevice(deviceType.swigValue(), dimension2di.getCPtr(windowSize), bits, fullscreen, stencilbuffer, vsync, IEventReceiver.getCPtr(receiver), receiver);
     return (cPtr == 0) ? null : new IrrlichtDevice(cPtr, false);
