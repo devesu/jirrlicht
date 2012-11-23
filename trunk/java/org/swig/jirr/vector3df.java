@@ -263,24 +263,27 @@ public class vector3df {
     JirrJNI.vector3df_getAs3Values(swigCPtr, this, SWIGTYPE_p_float.getCPtr(array));
   }
 
-  public void setX(float value) {
+  public vector3df setX(float value) {
     JirrJNI.vector3df_X_set(swigCPtr, this, value);
+    return this;
   }
 
   public float getX() {
     return JirrJNI.vector3df_X_get(swigCPtr, this);
   }
 
-  public void setY(float value) {
+  public vector3df setY(float value) {
     JirrJNI.vector3df_Y_set(swigCPtr, this, value);
+    return this;
   }
 
   public float getY() {
     return JirrJNI.vector3df_Y_get(swigCPtr, this);
   }
 
-  public void setZ(float value) {
+  public vector3df setZ(float value) {
     JirrJNI.vector3df_Z_set(swigCPtr, this, value);
+    return this;
   }
 
   public float getZ() {

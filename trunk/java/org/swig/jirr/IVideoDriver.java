@@ -35,12 +35,12 @@ public class IVideoDriver {
     }
   }
 
-  public boolean beginScene(boolean backBuffer, boolean zBuffer, SColor color, SWIGTYPE_p_SExposedVideoData videoData, recti sourceRect) {
-    return JirrJNI.IVideoDriver_beginScene__SWIG_0(swigCPtr, this, backBuffer, zBuffer, SColor.getCPtr(color), color, SWIGTYPE_p_SExposedVideoData.getCPtr(videoData), recti.getCPtr(sourceRect), sourceRect);
+  public boolean beginScene(boolean backBuffer, boolean zBuffer, SColor color, ExposedVideoData videoData, recti sourceRect) {
+    return JirrJNI.IVideoDriver_beginScene__SWIG_0(swigCPtr, this, backBuffer, zBuffer, SColor.getCPtr(color), color, ExposedVideoData.getCPtr(videoData), recti.getCPtr(sourceRect), sourceRect);
   }
 
-  public boolean beginScene(boolean backBuffer, boolean zBuffer, SColor color, SWIGTYPE_p_SExposedVideoData videoData) {
-    return JirrJNI.IVideoDriver_beginScene__SWIG_1(swigCPtr, this, backBuffer, zBuffer, SColor.getCPtr(color), color, SWIGTYPE_p_SExposedVideoData.getCPtr(videoData));
+  public boolean beginScene(boolean backBuffer, boolean zBuffer, SColor color, ExposedVideoData videoData) {
+    return JirrJNI.IVideoDriver_beginScene__SWIG_1(swigCPtr, this, backBuffer, zBuffer, SColor.getCPtr(color), color, ExposedVideoData.getCPtr(videoData));
   }
 
   public boolean beginScene(boolean backBuffer, boolean zBuffer, SColor color) {
@@ -787,8 +787,8 @@ public class IVideoDriver {
     JirrJNI.IVideoDriver_fillMaterialStructureFromAttributes(swigCPtr, this, SMaterial.getCPtr(outMaterial), outMaterial, IAttributes.getCPtr(attributes), attributes);
   }
 
-  public SWIGTYPE_p_SExposedVideoData getExposedVideoData() {
-    return new SWIGTYPE_p_SExposedVideoData(JirrJNI.IVideoDriver_getExposedVideoData(swigCPtr, this), false);
+  public ExposedVideoData getExposedVideoData() {
+    return new ExposedVideoData(JirrJNI.IVideoDriver_getExposedVideoData(swigCPtr, this), false);
   }
 
   public E_DRIVER_TYPE getDriverType() {

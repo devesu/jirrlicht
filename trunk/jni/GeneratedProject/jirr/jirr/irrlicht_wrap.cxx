@@ -54814,6 +54814,42 @@ SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_IVideoDriver_1getExposedVide
   return jresult;
 }
 
+SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_IVideoDriver_1createExposedVideoData(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  SExposedVideoData*videoData=new SExposedVideoData();
+  jresult=(jlong)videoData;
+  return jresult;
+}
+
+SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_IVideoDriver_1deleteExposedVideoData(JNIEnv *jenv, jclass jcls, jlong pointer) {
+  SExposedVideoData*videoData=(SExposedVideoData*)pointer;
+  delete videoData;
+}
+
+SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_IVideoDriver_1setExposedVideoDataD3D8HWND(JNIEnv *jenv, jclass jcls, jlong pointer, jlong handle) {
+  SExposedVideoData*videoData=(SExposedVideoData*)pointer;
+  void*hwnd=(void*)handle;
+  videoData->D3D8.HWnd=hwnd;
+}
+
+SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_IVideoDriver_1setExposedVideoDataD3D9HWND(JNIEnv *jenv, jclass jcls, jlong pointer, jlong handle) {
+  SExposedVideoData*videoData=(SExposedVideoData*)pointer;
+  void*hwnd=(void*)handle;
+  videoData->D3D9.HWnd=hwnd;
+}
+
+SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_IVideoDriver_1setExposedVideoDataOGLWIN(JNIEnv *jenv, jclass jcls, jlong pointer, jlong handle) {
+  SExposedVideoData*videoData=(SExposedVideoData*)pointer;
+  void*hwnd=(void*)handle;
+  videoData->OpenGLWin32.HWnd=hwnd;
+}
+
+SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_IVideoDriver_1setExposedVideoDataOGLLin(JNIEnv *jenv, jclass jcls, jlong pointer, jlong handle) {
+  SExposedVideoData*videoData=(SExposedVideoData*)pointer;
+  //void*hwnd=(void*)handle;
+  videoData->OpenGLLinux.X11Window=handle;
+}
+
 
 SWIGEXPORT jint JNICALL Java_org_swig_jirr_JirrJNI_IVideoDriver_1getDriverType(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
@@ -64109,7 +64145,7 @@ SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_SAnimatedMesh_1setMaterialFla
   (void)jcls;
   (void)jarg1_;
   arg1 = *(irr::scene::SAnimatedMesh **)&jarg1; 
-  (arg1)->setMaterialFlag((E_MATERIAL_FLAG)flag,state);
+  (arg1)->setMaterialFlag((E_MATERIAL_FLAG)flag,state?true: false);
 }
 
 
@@ -64457,7 +64493,7 @@ SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_SMesh_1setMaterialFlag(JNIEnv
   (void)jcls;
   (void)jarg1_;
   arg1 = *(irr::scene::SMesh **)&jarg1; 
-  (arg1)->setMaterialFlag((E_MATERIAL_FLAG)flag,state);
+  (arg1)->setMaterialFlag((E_MATERIAL_FLAG)flag,state?true:false);
 }
 
 
