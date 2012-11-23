@@ -27058,7 +27058,6 @@ SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_ISceneNode_1getMaterialCount
 
 
 SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_ISceneNode_1setMaterialFlag(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject object, jlong flag, jboolean state) {
-  fprintf(stderr,"111\n");
 	irr::scene::ISceneNode *arg1 = (irr::scene::ISceneNode *) 0 ;
   irr::video::E_MATERIAL_FLAG arg2 ;
   bool arg3 ;
@@ -27066,14 +27065,8 @@ SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_ISceneNode_1setMaterialFlag(J
   
   (void)jenv;
   (void)jcls;
-  fprintf(stderr,"2222\n");
   arg1 = *(irr::scene::ISceneNode **)&jarg1; 
-  fprintf(stderr,"3333\n");
-  fprintf(stderr,"55555\n");
-  fprintf(stderr,"66666\n");
-  fprintf(stderr,"7777\n");
   (arg1)->setMaterialFlag((E_MATERIAL_FLAG)flag,state);
-  fprintf(stderr,"88888\n");
 }
 
 
