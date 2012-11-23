@@ -2386,6 +2386,12 @@ public class JirrJNI {
   public final static native long IVideoDriver_createAttributesFromMaterial__SWIG_1(long jarg1, IVideoDriver jarg1_, long jarg2, SMaterial jarg2_);
   public final static native void IVideoDriver_fillMaterialStructureFromAttributes(long jarg1, IVideoDriver jarg1_, long jarg2, SMaterial jarg2_, long jarg3, IAttributes jarg3_);
   public final static native long IVideoDriver_getExposedVideoData(long jarg1, IVideoDriver jarg1_);
+  public final static native long IVideoDriver_createExposedVideoData();
+  public final static native long IVideoDriver_setExposedVideoDataD3D8HWND(long pointer, long hwnd);
+  public final static native long IVideoDriver_setExposedVideoDataD3D9HWND(long pointer, long hwnd);
+  public final static native long IVideoDriver_setExposedVideoDataOGLWIN(long pointer, long hwnd);
+  public final static native long IVideoDriver_setExposedVideoDataOGLLin(long pointer, long hwnd);
+  public final static native long IVideoDriver_deleteExposedVideoData(long pointer);
   public final static native int IVideoDriver_getDriverType(long jarg1, IVideoDriver jarg1_);
   public final static native long IVideoDriver_getGPUProgrammingServices(long jarg1, IVideoDriver jarg1_);
   public final static native long IVideoDriver_getMeshManipulator(long jarg1, IVideoDriver jarg1_);
