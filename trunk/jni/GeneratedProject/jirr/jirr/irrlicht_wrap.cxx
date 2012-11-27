@@ -27067,6 +27067,8 @@ SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_ISceneNode_1setMaterialFlag(J
   (void)jcls;
   arg1 = *(irr::scene::ISceneNode **)&jarg1; 
   (arg1)->setMaterialFlag((E_MATERIAL_FLAG)flag,state);
+  ICameraSceneNode*cam;
+  ISceneCollisionManager*collision;
 }
 
 
@@ -50517,6 +50519,10 @@ SWIGEXPORT jboolean JNICALL Java_org_swig_jirr_JirrJNI_IVideoDriver_1endScene(JN
   return jresult;
 }
 
+SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_IVideoDriver_1resetTransformMatrix(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  irr::video::IVideoDriver *arg1 = (irr::video::IVideoDriver *)  jarg1;
+  (arg1)->setTransform(video::ETS_WORLD, core::IdentityMatrix);
+}
 
 SWIGEXPORT jboolean JNICALL Java_org_swig_jirr_JirrJNI_IVideoDriver_1queryFeature(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   jboolean jresult = 0 ;
