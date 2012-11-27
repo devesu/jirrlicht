@@ -17,7 +17,7 @@ public class vector3df {
     swigCPtr = cPtr;
   }
 
-  protected static long getCPtr(vector3df obj) {
+  public static long getCPtr(vector3df obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 

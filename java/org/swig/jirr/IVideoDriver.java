@@ -87,12 +87,12 @@ public class IVideoDriver {
     return JirrJNI.IVideoDriver_checkDriverReset(swigCPtr, this);
   }
 
-  public void setTransform(E_TRANSFORMATION_STATE state, SWIGTYPE_p_irr__core__CMatrix4T_float_t mat) {
-    JirrJNI.IVideoDriver_setTransform(swigCPtr, this, state.swigValue(), SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(mat));
+  public void setTransform(E_TRANSFORMATION_STATE state, CMatrix4f mat) {
+    JirrJNI.IVideoDriver_setTransform(swigCPtr, this, state.swigValue(), CMatrix4f.getCPtr(mat));
   }
 
-  public SWIGTYPE_p_irr__core__CMatrix4T_float_t getTransform(E_TRANSFORMATION_STATE state) {
-    return new SWIGTYPE_p_irr__core__CMatrix4T_float_t(JirrJNI.IVideoDriver_getTransform(swigCPtr, this, state.swigValue()), false);
+  public CMatrix4f getTransform(E_TRANSFORMATION_STATE state) {
+    return new CMatrix4f(JirrJNI.IVideoDriver_getTransform(swigCPtr, this, state.swigValue()), false);
   }
 
   public long getImageLoaderCount() {

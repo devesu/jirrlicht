@@ -39,24 +39,24 @@ public class ITriangleSelector {
     return JirrJNI.ITriangleSelector_getTriangleCount(swigCPtr, this);
   }
 
-  public void getTriangles(triangle3df triangles, int arraySize, SWIGTYPE_p_int outTriangleCount, SWIGTYPE_p_irr__core__CMatrix4T_float_t transform) {
-    JirrJNI.ITriangleSelector_getTriangles__SWIG_0(swigCPtr, this, triangle3df.getCPtr(triangles), triangles, arraySize, SWIGTYPE_p_int.getCPtr(outTriangleCount), SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(transform));
+  public void getTriangles(triangle3df triangles, int arraySize, SWIGTYPE_p_int outTriangleCount, CMatrix4f transform) {
+    JirrJNI.ITriangleSelector_getTriangles__SWIG_0(swigCPtr, this, triangle3df.getCPtr(triangles), triangles, arraySize, SWIGTYPE_p_int.getCPtr(outTriangleCount), CMatrix4f.getCPtr(transform));
   }
 
   public void getTriangles(triangle3df triangles, int arraySize, SWIGTYPE_p_int outTriangleCount) {
     JirrJNI.ITriangleSelector_getTriangles__SWIG_1(swigCPtr, this, triangle3df.getCPtr(triangles), triangles, arraySize, SWIGTYPE_p_int.getCPtr(outTriangleCount));
   }
 
-  public void getTriangles(triangle3df triangles, int arraySize, SWIGTYPE_p_int outTriangleCount, aabbox3df box, SWIGTYPE_p_irr__core__CMatrix4T_float_t transform) {
-    JirrJNI.ITriangleSelector_getTriangles__SWIG_2(swigCPtr, this, triangle3df.getCPtr(triangles), triangles, arraySize, SWIGTYPE_p_int.getCPtr(outTriangleCount), aabbox3df.getCPtr(box), box, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(transform));
+  public void getTriangles(triangle3df triangles, int arraySize, SWIGTYPE_p_int outTriangleCount, aabbox3df box, CMatrix4f transform) {
+    JirrJNI.ITriangleSelector_getTriangles__SWIG_2(swigCPtr, this, triangle3df.getCPtr(triangles), triangles, arraySize, SWIGTYPE_p_int.getCPtr(outTriangleCount), aabbox3df.getCPtr(box), box, CMatrix4f.getCPtr(transform));
   }
 
   public void getTriangles(triangle3df triangles, int arraySize, SWIGTYPE_p_int outTriangleCount, aabbox3df box) {
     JirrJNI.ITriangleSelector_getTriangles__SWIG_3(swigCPtr, this, triangle3df.getCPtr(triangles), triangles, arraySize, SWIGTYPE_p_int.getCPtr(outTriangleCount), aabbox3df.getCPtr(box), box);
   }
 
-  public void getTriangles(triangle3df triangles, int arraySize, SWIGTYPE_p_int outTriangleCount, line3df line, SWIGTYPE_p_irr__core__CMatrix4T_float_t transform) {
-    JirrJNI.ITriangleSelector_getTriangles__SWIG_4(swigCPtr, this, triangle3df.getCPtr(triangles), triangles, arraySize, SWIGTYPE_p_int.getCPtr(outTriangleCount), line3df.getCPtr(line), line, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(transform));
+  public void getTriangles(triangle3df triangles, int arraySize, SWIGTYPE_p_int outTriangleCount, line3df line, CMatrix4f transform) {
+    JirrJNI.ITriangleSelector_getTriangles__SWIG_4(swigCPtr, this, triangle3df.getCPtr(triangles), triangles, arraySize, SWIGTYPE_p_int.getCPtr(outTriangleCount), line3df.getCPtr(line), line, CMatrix4f.getCPtr(transform));
   }
 
   public void getTriangles(triangle3df triangles, int arraySize, SWIGTYPE_p_int outTriangleCount, line3df line) {

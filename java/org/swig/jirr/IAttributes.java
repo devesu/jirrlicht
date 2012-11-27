@@ -423,24 +423,24 @@ public class IAttributes {
     JirrJNI.IAttributes_setAttribute__SWIG_26(swigCPtr, this, index, SWIGTYPE_p_irr__core__dimension2dT_unsigned_int_t.getCPtr(v));
   }
 
-  public void addMatrix(String attributeName, SWIGTYPE_p_irr__core__CMatrix4T_float_t v) {
-    JirrJNI.IAttributes_addMatrix(swigCPtr, this, attributeName, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(v));
+  public void addMatrix(String attributeName, CMatrix4f v) {
+    JirrJNI.IAttributes_addMatrix(swigCPtr, this, attributeName, CMatrix4f.getCPtr(v));
   }
 
-  public void setAttribute(String attributeName, SWIGTYPE_p_irr__core__CMatrix4T_float_t v) {
-    JirrJNI.IAttributes_setAttribute__SWIG_27(swigCPtr, this, attributeName, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(v));
+  public void setAttribute(String attributeName, CMatrix4f v) {
+    JirrJNI.IAttributes_setAttribute__SWIG_27(swigCPtr, this, attributeName, CMatrix4f.getCPtr(v));
   }
 
-  public SWIGTYPE_p_irr__core__CMatrix4T_float_t getAttributeAsMatrix(String attributeName) {
-    return new SWIGTYPE_p_irr__core__CMatrix4T_float_t(JirrJNI.IAttributes_getAttributeAsMatrix__SWIG_0(swigCPtr, this, attributeName), true);
+  public CMatrix4f getAttributeAsMatrix(String attributeName) {
+    return new CMatrix4f(JirrJNI.IAttributes_getAttributeAsMatrix__SWIG_0(swigCPtr, this, attributeName), true);
   }
 
-  public SWIGTYPE_p_irr__core__CMatrix4T_float_t getAttributeAsMatrix(int index) {
-    return new SWIGTYPE_p_irr__core__CMatrix4T_float_t(JirrJNI.IAttributes_getAttributeAsMatrix__SWIG_1(swigCPtr, this, index), true);
+  public CMatrix4f getAttributeAsMatrix(int index) {
+    return new CMatrix4f(JirrJNI.IAttributes_getAttributeAsMatrix__SWIG_1(swigCPtr, this, index), true);
   }
 
-  public void setAttribute(int index, SWIGTYPE_p_irr__core__CMatrix4T_float_t v) {
-    JirrJNI.IAttributes_setAttribute__SWIG_28(swigCPtr, this, index, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(v));
+  public void setAttribute(int index, CMatrix4f v) {
+    JirrJNI.IAttributes_setAttribute__SWIG_28(swigCPtr, this, index, CMatrix4f.getCPtr(v));
   }
 
   public void addQuaternion(String attributeName, quaternion v) {
