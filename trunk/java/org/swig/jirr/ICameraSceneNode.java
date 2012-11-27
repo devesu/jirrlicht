@@ -35,28 +35,28 @@ public class ICameraSceneNode extends ISceneNode {
     super.delete();
   }
 
-  public void setProjectionMatrix(SWIGTYPE_p_irr__core__CMatrix4T_float_t projection, boolean isOrthogonal) {
-    JirrJNI.ICameraSceneNode_setProjectionMatrix__SWIG_0(swigCPtr, this, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(projection), isOrthogonal);
+  public void setProjectionMatrix(CMatrix4f projection, boolean isOrthogonal) {
+    JirrJNI.ICameraSceneNode_setProjectionMatrix__SWIG_0(swigCPtr, this, CMatrix4f.getCPtr(projection), isOrthogonal);
   }
 
-  public void setProjectionMatrix(SWIGTYPE_p_irr__core__CMatrix4T_float_t projection) {
-    JirrJNI.ICameraSceneNode_setProjectionMatrix__SWIG_1(swigCPtr, this, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(projection));
+  public void setProjectionMatrix(CMatrix4f projection) {
+    JirrJNI.ICameraSceneNode_setProjectionMatrix__SWIG_1(swigCPtr, this, CMatrix4f.getCPtr(projection));
   }
 
-  public SWIGTYPE_p_irr__core__CMatrix4T_float_t getProjectionMatrix() {
-    return new SWIGTYPE_p_irr__core__CMatrix4T_float_t(JirrJNI.ICameraSceneNode_getProjectionMatrix(swigCPtr, this), false);
+  public CMatrix4f getProjectionMatrix() {
+    return new CMatrix4f(JirrJNI.ICameraSceneNode_getProjectionMatrix(swigCPtr, this), false);
   }
 
-  public SWIGTYPE_p_irr__core__CMatrix4T_float_t getViewMatrix() {
-    return new SWIGTYPE_p_irr__core__CMatrix4T_float_t(JirrJNI.ICameraSceneNode_getViewMatrix(swigCPtr, this), false);
+  public CMatrix4f getViewMatrix() {
+    return new CMatrix4f(JirrJNI.ICameraSceneNode_getViewMatrix(swigCPtr, this), false);
   }
 
-  public void setViewMatrixAffector(SWIGTYPE_p_irr__core__CMatrix4T_float_t affector) {
-    JirrJNI.ICameraSceneNode_setViewMatrixAffector(swigCPtr, this, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(affector));
+  public void setViewMatrixAffector(CMatrix4f affector) {
+    JirrJNI.ICameraSceneNode_setViewMatrixAffector(swigCPtr, this, CMatrix4f.getCPtr(affector));
   }
 
-  public SWIGTYPE_p_irr__core__CMatrix4T_float_t getViewMatrixAffector() {
-    return new SWIGTYPE_p_irr__core__CMatrix4T_float_t(JirrJNI.ICameraSceneNode_getViewMatrixAffector(swigCPtr, this), false);
+  public CMatrix4f getViewMatrixAffector() {
+    return new CMatrix4f(JirrJNI.ICameraSceneNode_getViewMatrixAffector(swigCPtr, this), false);
   }
 
   public boolean OnEvent(SEvent event) {

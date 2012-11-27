@@ -271,16 +271,16 @@ public class SMaterial {
     return JirrJNI.SMaterial_UseMipMaps_get(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_irr__core__CMatrix4T_float_t getTextureMatrix(long i) {
-    return new SWIGTYPE_p_irr__core__CMatrix4T_float_t(JirrJNI.SMaterial_getTextureMatrix(swigCPtr, this, i), false);
+  public CMatrix4f getTextureMatrix(long i) {
+    return new CMatrix4f(JirrJNI.SMaterial_getTextureMatrix(swigCPtr, this, i), false);
   }
 
-  public SWIGTYPE_p_irr__core__CMatrix4T_float_t getTextureMatrixConst(long i) {
-    return new SWIGTYPE_p_irr__core__CMatrix4T_float_t(JirrJNI.SMaterial_getTextureMatrixConst(swigCPtr, this, i), false);
+  public CMatrix4f getTextureMatrixConst(long i) {
+    return new CMatrix4f(JirrJNI.SMaterial_getTextureMatrixConst(swigCPtr, this, i), false);
   }
 
-  public void setTextureMatrix(long i, SWIGTYPE_p_irr__core__CMatrix4T_float_t mat) {
-    JirrJNI.SMaterial_setTextureMatrix(swigCPtr, this, i, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(mat));
+  public void setTextureMatrix(long i, CMatrix4f mat) {
+    JirrJNI.SMaterial_setTextureMatrix(swigCPtr, this, i, CMatrix4f.getCPtr(mat));
   }
 
   public ITexture getTexture(long i) {

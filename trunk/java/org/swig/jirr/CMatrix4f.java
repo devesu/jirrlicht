@@ -8,18 +8,18 @@
 
 package org.swig.jirr;
 
-public class SWIGTYPE_p_irr__core__CMatrix4T_float_t {
+public class CMatrix4f {
   private long swigCPtr;
 
-  protected SWIGTYPE_p_irr__core__CMatrix4T_float_t(long cPtr, boolean futureUse) {
+  protected CMatrix4f(long cPtr, boolean futureUse) {
     swigCPtr = cPtr;
   }
 
-  protected SWIGTYPE_p_irr__core__CMatrix4T_float_t() {
+  protected CMatrix4f() {
     swigCPtr = 0;
   }
 
-  protected static long getCPtr(SWIGTYPE_p_irr__core__CMatrix4T_float_t obj) {
+  protected static long getCPtr(CMatrix4f obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }

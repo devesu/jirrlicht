@@ -43,16 +43,16 @@ public class SViewFrustum {
     this(JirrJNI.new_SViewFrustum__SWIG_1(SViewFrustum.getCPtr(other), other), true);
   }
 
-  public SViewFrustum(SWIGTYPE_p_irr__core__CMatrix4T_float_t mat) {
-    this(JirrJNI.new_SViewFrustum__SWIG_2(SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(mat)), true);
+  public SViewFrustum(CMatrix4f mat) {
+    this(JirrJNI.new_SViewFrustum__SWIG_2(CMatrix4f.getCPtr(mat)), true);
   }
 
-  public void setFrom(SWIGTYPE_p_irr__core__CMatrix4T_float_t mat) {
-    JirrJNI.SViewFrustum_setFrom(swigCPtr, this, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(mat));
+  public void setFrom(CMatrix4f mat) {
+    JirrJNI.SViewFrustum_setFrom(swigCPtr, this, CMatrix4f.getCPtr(mat));
   }
 
-  public void transform(SWIGTYPE_p_irr__core__CMatrix4T_float_t mat) {
-    JirrJNI.SViewFrustum_transform(swigCPtr, this, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(mat));
+  public void transform(CMatrix4f mat) {
+    JirrJNI.SViewFrustum_transform(swigCPtr, this, CMatrix4f.getCPtr(mat));
   }
 
   public vector3df getFarLeftUp() {
@@ -95,8 +95,8 @@ public class SViewFrustum {
     JirrJNI.SViewFrustum_recalculateBoundingBox(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_irr__core__CMatrix4T_float_t getTransform(E_TRANSFORMATION_STATE state) {
-    return new SWIGTYPE_p_irr__core__CMatrix4T_float_t(JirrJNI.SViewFrustum_getTransform__SWIG_0(swigCPtr, this, state.swigValue()), false);
+  public CMatrix4f getTransform(E_TRANSFORMATION_STATE state) {
+    return new CMatrix4f(JirrJNI.SViewFrustum_getTransform__SWIG_0(swigCPtr, this, state.swigValue()), false);
   }
 
   public boolean clipLine(line3df line) {

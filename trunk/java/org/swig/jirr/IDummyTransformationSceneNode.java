@@ -35,8 +35,8 @@ public class IDummyTransformationSceneNode extends ISceneNode {
     super.delete();
   }
 
-  public SWIGTYPE_p_irr__core__CMatrix4T_float_t getRelativeTransformationMatrix() {
-    return new SWIGTYPE_p_irr__core__CMatrix4T_float_t(JirrJNI.IDummyTransformationSceneNode_getRelativeTransformationMatrix(swigCPtr, this), false);
+  public CMatrix4f getRelativeTransformationMatrix() {
+    return new CMatrix4f(JirrJNI.IDummyTransformationSceneNode_getRelativeTransformationMatrix(swigCPtr, this), false);
   }
 
 }

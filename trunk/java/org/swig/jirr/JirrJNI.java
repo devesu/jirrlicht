@@ -1190,6 +1190,9 @@ public class JirrJNI {
   public final static native void ISceneNode_setRotation(long jarg1, ISceneNode jarg1_, long jarg2, vector3df jarg2_);
   public final static native void ISceneNode_setRotationSwigExplicitISceneNode(long jarg1, ISceneNode jarg1_, long jarg2, vector3df jarg2_);
   public final static native long ISceneNode_getPosition(long jarg1, ISceneNode jarg1_);
+  public final static native long ISceneNode_mapLocalPositionToGlobalSpace(long nodePointer, long vectorPointer);
+  public final static native long ISceneNode_mapGlobalPositionToLocalSpace(long nodePointer, long vectorPointer);
+  
   public final static native long ISceneNode_getPositionSwigExplicitISceneNode(long jarg1, ISceneNode jarg1_);
   public final static native void ISceneNode_setPosition(long jarg1, ISceneNode jarg1_, long jarg2, vector3df jarg2_);
   public final static native void ISceneNode_setPositionSwigExplicitISceneNode(long jarg1, ISceneNode jarg1_, long jarg2, vector3df jarg2_);
@@ -3927,10 +3930,10 @@ public class JirrJNI {
     return aabbox3df.getCPtr(self.getTransformedBoundingBox());
   }
   public static long SwigDirector_ISceneNode_getAbsoluteTransformation(ISceneNode self) {
-    return SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(self.getAbsoluteTransformation());
+    return CMatrix4f.getCPtr(self.getAbsoluteTransformation());
   }
   public static long SwigDirector_ISceneNode_getRelativeTransformation(ISceneNode self) {
-    return SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(self.getRelativeTransformation());
+    return CMatrix4f.getCPtr(self.getRelativeTransformation());
   }
   public static boolean SwigDirector_ISceneNode_isVisible(ISceneNode self) {
     return self.isVisible();

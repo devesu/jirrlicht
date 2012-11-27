@@ -47,8 +47,8 @@ public class SMD3QuaternionTag {
     this(JirrJNI.new_SMD3QuaternionTag__SWIG_2(vector3df.getCPtr(pos), pos, vector3df.getCPtr(angle), angle), true);
   }
 
-  public void setto(SWIGTYPE_p_irr__core__CMatrix4T_float_t m) {
-    JirrJNI.SMD3QuaternionTag_setto(swigCPtr, this, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(m));
+  public void setto(CMatrix4f m) {
+    JirrJNI.SMD3QuaternionTag_setto(swigCPtr, this, CMatrix4f.getCPtr(m));
   }
 
   public boolean equalsOperator(SMD3QuaternionTag other) {

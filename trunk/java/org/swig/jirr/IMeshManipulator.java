@@ -139,16 +139,16 @@ public class IMeshManipulator {
     JirrJNI.IMeshManipulator_scaleTCoords__SWIG_3(swigCPtr, this, IMeshBuffer.getCPtr(buffer), buffer, vector2df.getCPtr(factor), factor);
   }
 
-  public void transform(IMesh mesh, SWIGTYPE_p_irr__core__CMatrix4T_float_t m) {
-    JirrJNI.IMeshManipulator_transform__SWIG_0(swigCPtr, this, IMesh.getCPtr(mesh), mesh, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(m));
+  public void transform(IMesh mesh, CMatrix4f m) {
+    JirrJNI.IMeshManipulator_transform__SWIG_0(swigCPtr, this, IMesh.getCPtr(mesh), mesh, CMatrix4f.getCPtr(m));
   }
 
-  public void transform(IMeshBuffer buffer, SWIGTYPE_p_irr__core__CMatrix4T_float_t m) {
-    JirrJNI.IMeshManipulator_transform__SWIG_1(swigCPtr, this, IMeshBuffer.getCPtr(buffer), buffer, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(m));
+  public void transform(IMeshBuffer buffer, CMatrix4f m) {
+    JirrJNI.IMeshManipulator_transform__SWIG_1(swigCPtr, this, IMeshBuffer.getCPtr(buffer), buffer, CMatrix4f.getCPtr(m));
   }
 
-  public void transformMesh(IMesh mesh, SWIGTYPE_p_irr__core__CMatrix4T_float_t m) {
-    JirrJNI.IMeshManipulator_transformMesh(swigCPtr, this, IMesh.getCPtr(mesh), mesh, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(m));
+  public void transformMesh(IMesh mesh, CMatrix4f m) {
+    JirrJNI.IMeshManipulator_transformMesh(swigCPtr, this, IMesh.getCPtr(mesh), mesh, CMatrix4f.getCPtr(m));
   }
 
   public void makePlanarTextureMapping(IMesh mesh, float resolution) {

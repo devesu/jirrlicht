@@ -52,8 +52,8 @@ public class quaternion {
         this(JirrJNI.new_quaternion__SWIG_3(vector3df.getCPtr(vec), vec), true);
     }
 
-    public quaternion(SWIGTYPE_p_irr__core__CMatrix4T_float_t mat) {
-        this(JirrJNI.new_quaternion__SWIG_4(SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(mat)), true);
+    public quaternion(CMatrix4f mat) {
+        this(JirrJNI.new_quaternion__SWIG_4(CMatrix4f.getCPtr(mat)), true);
     }
 
     public boolean equalsOperator(quaternion other) {
@@ -68,8 +68,8 @@ public class quaternion {
         return new quaternion(JirrJNI.quaternion_assignOperator__SWIG_0(swigCPtr, this, quaternion.getCPtr(other), other), false);
     }
 
-    public quaternion assignOperator(SWIGTYPE_p_irr__core__CMatrix4T_float_t other) {
-        return new quaternion(JirrJNI.quaternion_assignOperator__SWIG_1(swigCPtr, this, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(other)), false);
+    public quaternion assignOperator(CMatrix4f other) {
+        return new quaternion(JirrJNI.quaternion_assignOperator__SWIG_1(swigCPtr, this, CMatrix4f.getCPtr(other)), false);
     }
 
     public quaternion addOperator(quaternion other) {
@@ -128,24 +128,24 @@ public class quaternion {
         return new quaternion(JirrJNI.quaternion_normalize(swigCPtr, this), false);
     }
 
-    public SWIGTYPE_p_irr__core__CMatrix4T_float_t getMatrix() {
-        return new SWIGTYPE_p_irr__core__CMatrix4T_float_t(JirrJNI.quaternion_getMatrix__SWIG_0(swigCPtr, this), true);
+    public CMatrix4f getMatrix() {
+        return new CMatrix4f(JirrJNI.quaternion_getMatrix__SWIG_0(swigCPtr, this), true);
     }
 
-    public void getMatrix(SWIGTYPE_p_irr__core__CMatrix4T_float_t dest, vector3df translation) {
-        JirrJNI.quaternion_getMatrix__SWIG_1(swigCPtr, this, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(dest), vector3df.getCPtr(translation), translation);
+    public void getMatrix(CMatrix4f dest, vector3df translation) {
+        JirrJNI.quaternion_getMatrix__SWIG_1(swigCPtr, this, CMatrix4f.getCPtr(dest), vector3df.getCPtr(translation), translation);
     }
 
-    public void getMatrix(SWIGTYPE_p_irr__core__CMatrix4T_float_t dest) {
-        JirrJNI.quaternion_getMatrix__SWIG_2(swigCPtr, this, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(dest));
+    public void getMatrix(CMatrix4f dest) {
+        JirrJNI.quaternion_getMatrix__SWIG_2(swigCPtr, this, CMatrix4f.getCPtr(dest));
     }
 
-    public void getMatrixCenter(SWIGTYPE_p_irr__core__CMatrix4T_float_t dest, vector3df center, vector3df translation) {
-        JirrJNI.quaternion_getMatrixCenter(swigCPtr, this, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(dest), vector3df.getCPtr(center), center, vector3df.getCPtr(translation), translation);
+    public void getMatrixCenter(CMatrix4f dest, vector3df center, vector3df translation) {
+        JirrJNI.quaternion_getMatrixCenter(swigCPtr, this, CMatrix4f.getCPtr(dest), vector3df.getCPtr(center), center, vector3df.getCPtr(translation), translation);
     }
 
-    public void getMatrix_transposed(SWIGTYPE_p_irr__core__CMatrix4T_float_t dest) {
-        JirrJNI.quaternion_getMatrix_transposed(swigCPtr, this, SWIGTYPE_p_irr__core__CMatrix4T_float_t.getCPtr(dest));
+    public void getMatrix_transposed(CMatrix4f dest) {
+        JirrJNI.quaternion_getMatrix_transposed(swigCPtr, this, CMatrix4f.getCPtr(dest));
     }
 
     public quaternion makeInverse() {

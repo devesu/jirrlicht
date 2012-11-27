@@ -58,7 +58,7 @@ public class ISceneNode extends IAttributeExchangingObject {
     this(JirrJNI.new_ISceneNode__SWIG_0(ISceneNode.getCPtr(parent), parent, ISceneManager.getCPtr(mgr), mgr, id, vector3df.getCPtr(position), position, vector3df.getCPtr(rotation), rotation, vector3df.getCPtr(scale), scale), true);
     JirrJNI.ISceneNode_director_connect(this, swigCPtr, swigCMemOwn, true);
   }
-
+  
   public ISceneNode(ISceneNode parent, ISceneManager mgr, int id, vector3df position, vector3df rotation) {
     this(JirrJNI.new_ISceneNode__SWIG_1(ISceneNode.getCPtr(parent), parent, ISceneManager.getCPtr(mgr), mgr, id, vector3df.getCPtr(position), position, vector3df.getCPtr(rotation), rotation), true);
     JirrJNI.ISceneNode_director_connect(this, swigCPtr, swigCMemOwn, true);
@@ -119,12 +119,12 @@ public class ISceneNode extends IAttributeExchangingObject {
     return new aabbox3df((getClass() == ISceneNode.class) ? JirrJNI.ISceneNode_getTransformedBoundingBox(swigCPtr, this) : JirrJNI.ISceneNode_getTransformedBoundingBoxSwigExplicitISceneNode(swigCPtr, this), true);
   }
 
-  public SWIGTYPE_p_irr__core__CMatrix4T_float_t getAbsoluteTransformation() {
-    return new SWIGTYPE_p_irr__core__CMatrix4T_float_t((getClass() == ISceneNode.class) ? JirrJNI.ISceneNode_getAbsoluteTransformation(swigCPtr, this) : JirrJNI.ISceneNode_getAbsoluteTransformationSwigExplicitISceneNode(swigCPtr, this), false);
+  public CMatrix4f getAbsoluteTransformation() {
+    return new CMatrix4f((getClass() == ISceneNode.class) ? JirrJNI.ISceneNode_getAbsoluteTransformation(swigCPtr, this) : JirrJNI.ISceneNode_getAbsoluteTransformationSwigExplicitISceneNode(swigCPtr, this), false);
   }
 
-  public SWIGTYPE_p_irr__core__CMatrix4T_float_t getRelativeTransformation() {
-    return new SWIGTYPE_p_irr__core__CMatrix4T_float_t((getClass() == ISceneNode.class) ? JirrJNI.ISceneNode_getRelativeTransformation(swigCPtr, this) : JirrJNI.ISceneNode_getRelativeTransformationSwigExplicitISceneNode(swigCPtr, this), true);
+  public CMatrix4f getRelativeTransformation() {
+    return new CMatrix4f((getClass() == ISceneNode.class) ? JirrJNI.ISceneNode_getRelativeTransformation(swigCPtr, this) : JirrJNI.ISceneNode_getRelativeTransformationSwigExplicitISceneNode(swigCPtr, this), true);
   }
 
   public boolean isVisible() {
@@ -259,6 +259,16 @@ public class ISceneNode extends IAttributeExchangingObject {
   public vector3df getPosition() {
     return new vector3df((getClass() == ISceneNode.class) ? JirrJNI.ISceneNode_getPosition(swigCPtr, this) : JirrJNI.ISceneNode_getPositionSwigExplicitISceneNode(swigCPtr, this), false);
   }
+  
+  public vector3df convertLocalVectorToGlobalSpace(vector3df localPoint) {
+      long newVectorPointer=JirrJNI.ISceneNode_mapLocalPositionToGlobalSpace(swigCPtr, vector3df.getCPtr(localPoint));
+      return new vector3df(newVectorPointer , false);
+  }
+  
+  public vector3df convertGlobalVectorToLocalSpace(vector3df localPoint) {
+      long newVectorPointer=JirrJNI.ISceneNode_mapGlobalPositionToLocalSpace(swigCPtr, vector3df.getCPtr(localPoint));
+      return new vector3df(newVectorPointer , false);
+  }
 
   public void setPosition(vector3df newpos) {
     if (getClass() == ISceneNode.class) {
@@ -331,6 +341,11 @@ public class ISceneNode extends IAttributeExchangingObject {
         } else {
             JirrJNI.ISceneNode_updateAbsolutePositionSwigExplicitISceneNode(swigCPtr, this);
         }
+  }
+  
+  public void moveObjectLocalCoordinates(vector3df direction){
+      vector3df dir=getRotation().rotationToDirection(direction);
+      setPosition(getPosition().addOperator(dir));
   }
 
   public ISceneNode getParent() {
