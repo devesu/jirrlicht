@@ -2080,10 +2080,10 @@ void SwigDirector_ISceneNode::swig_connect_director(JNIEnv *jenv, jobject jself,
       "getTransformedBoundingBox", "()Lorg/swig/jirr/aabbox3df;", NULL 
     },
     {
-      "getAbsoluteTransformation", "()Lorg/swig/jirr/SWIGTYPE_p_irr__core__CMatrix4T_float_t;", NULL 
+      "getAbsoluteTransformation", "()Lorg/swig/jirr/CMatrix4f;", NULL 
     },
     {
-      "getRelativeTransformation", "()Lorg/swig/jirr/SWIGTYPE_p_irr__core__CMatrix4T_float_t;", NULL 
+      "getRelativeTransformation", "()Lorg/swig/jirr/CMatrix4f;", NULL 
     },
     {
       "isVisible", "()Z", NULL 
@@ -27253,6 +27253,25 @@ SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_ISceneNode_1getPosition(JNIE
   return jresult;
 }
 
+SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_ISceneNode_1mapLocalPositionToGlobalSpace(JNIEnv *jenv, jclass jcls, jlong nodePointer, jlong pointPointer) {
+	vector3df*point=(vector3df*)pointPointer;
+	ISceneNode*node=(ISceneNode*)nodePointer;
+	vector3df*newVector=new vector3df(*point);
+	node->getAbsoluteTransformation().transformVect(*newVector);
+	return (jlong)newVector;
+}
+
+SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_ISceneNode_1mapGlobalPositionToLocalSpace(JNIEnv *jenv, jclass jcls, jlong nodePointer, jlong pointPointer) {
+	vector3df*point=(vector3df*)pointPointer;
+	ISceneNode*node=(ISceneNode*)nodePointer;
+	
+	vector3df*newVector=new vector3df(*point);
+
+	core::matrix4 world_to_local=node->getAbsoluteTransformation();
+	world_to_local.makeInverse();
+	world_to_local.transformVect(*newVector);
+	return (jlong)newVector;
+}
 
 SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_ISceneNode_1getPositionSwigExplicitISceneNode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
