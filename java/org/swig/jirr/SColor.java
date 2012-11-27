@@ -15,6 +15,7 @@ public class SColor {
     public static final SColor BLUE = new SColor(255, 0, 0, 255);
     public static final SColor WHITE = new SColor(255, 255, 255, 255);
     public static final SColor GRAY = new SColor(255, 127, 127, 127);
+    public static final SColor GRAY_L = new SColor(255, 200, 200, 200);
     public static final SColor BLACK = new SColor(255, 0, 0, 0);
     
     public static final SColor RED_L = new SColor(255, 255, 127, 127);

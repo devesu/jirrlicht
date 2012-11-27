@@ -2210,6 +2210,7 @@ public class JirrJNI {
   public final static native boolean IVideoDriver_beginScene__SWIG_4(long jarg1, IVideoDriver jarg1_, boolean jarg2);
   public final static native boolean IVideoDriver_beginScene__SWIG_5(long jarg1, IVideoDriver jarg1_);
   public final static native boolean IVideoDriver_endScene(long jarg1, IVideoDriver jarg1_);
+  public final static native boolean IVideoDriver_resetTransformMatrix(long pointer);
   public final static native boolean IVideoDriver_queryFeature(long jarg1, IVideoDriver jarg1_, long jarg2);
   public final static native void IVideoDriver_disableFeature__SWIG_0(long jarg1, IVideoDriver jarg1_, long jarg2, boolean jarg3);
   public final static native void IVideoDriver_disableFeature__SWIG_1(long jarg1, IVideoDriver jarg1_, long jarg2);

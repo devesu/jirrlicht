@@ -63,6 +63,10 @@ public class IVideoDriver {
     return JirrJNI.IVideoDriver_endScene(swigCPtr, this);
   }
 
+  public void resetTransformMatrix(){
+      JirrJNI.IVideoDriver_resetTransformMatrix(swigCPtr);
+  }
+  
   public boolean queryFeature(SWIGTYPE_p_E_VIDEO_DRIVER_FEATURE feature) {
     return JirrJNI.IVideoDriver_queryFeature(swigCPtr, this, SWIGTYPE_p_E_VIDEO_DRIVER_FEATURE.getCPtr(feature));
   }
