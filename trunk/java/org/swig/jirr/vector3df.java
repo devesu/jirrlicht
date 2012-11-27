@@ -267,6 +267,12 @@ public class vector3df {
     JirrJNI.vector3df_X_set(swigCPtr, this, value);
     return this;
   }
+  
+  public vector3df addX(float value) {
+    float x=JirrJNI.vector3df_X_get(swigCPtr, this);
+    setX(x+value);
+    return this;
+  }
 
   public float getX() {
     return JirrJNI.vector3df_X_get(swigCPtr, this);
@@ -274,6 +280,18 @@ public class vector3df {
 
   public vector3df setY(float value) {
     JirrJNI.vector3df_Y_set(swigCPtr, this, value);
+    return this;
+  }
+  
+  public vector3df addY(float value) {
+    float y=JirrJNI.vector3df_Y_get(swigCPtr, this);
+    setY(y+value);
+    return this;
+  }
+  
+  public vector3df addZ(float value) {
+    float z=JirrJNI.vector3df_Z_get(swigCPtr, this);
+    setZ(z+value);
     return this;
   }
 

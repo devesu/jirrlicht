@@ -64,8 +64,9 @@ public class SMaterial {
     return new SWIGTYPE_p_E_MATERIAL_TYPE(JirrJNI.SMaterial_MaterialType_get(swigCPtr, this), true);
   }
 
-  public void setAmbientColor(SColor value) {
+  public SMaterial setAmbientColor(SColor value) {
     JirrJNI.SMaterial_AmbientColor_set(swigCPtr, this, SColor.getCPtr(value), value);
+    return this;
   }
 
   public SColor getAmbientColor() {
@@ -73,8 +74,9 @@ public class SMaterial {
     return (cPtr == 0) ? null : new SColor(cPtr, false);
   }
 
-  public void setDiffuseColor(SColor value) {
+  public SMaterial setDiffuseColor(SColor value) {
     JirrJNI.SMaterial_DiffuseColor_set(swigCPtr, this, SColor.getCPtr(value), value);
+    return this;
   }
 
   public SColor getDiffuseColor() {
@@ -82,8 +84,9 @@ public class SMaterial {
     return (cPtr == 0) ? null : new SColor(cPtr, false);
   }
 
-  public void setEmissiveColor(SColor value) {
+  public SMaterial setEmissiveColor(SColor value) {
     JirrJNI.SMaterial_EmissiveColor_set(swigCPtr, this, SColor.getCPtr(value), value);
+    return this;
   }
 
   public SColor getEmissiveColor() {
