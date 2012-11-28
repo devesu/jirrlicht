@@ -7,6 +7,7 @@
  * ----------------------------------------------------------------------------- */
 package org.swig.jirr;
 
+
 public class SColor {
 
     //Predefined colors
@@ -28,6 +29,10 @@ public class SColor {
     protected SColor(long cPtr, boolean cMemoryOwn) {
         swigCMemOwn = cMemoryOwn;
         swigCPtr = cPtr;
+    }
+    
+    public static SColor randomColor(){
+        return new SColor(255,(int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
     }
 
     protected static long getCPtr(SColor obj) {

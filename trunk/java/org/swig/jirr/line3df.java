@@ -129,4 +129,12 @@ public class line3df {
     return (cPtr == 0) ? null : new vector3df(cPtr, false);
   }
 
+    @Override
+    public String toString() {
+        String str="Start="+getStart().toString()+"; End="+getEnd().toString()+"; Length="+getLength();
+        return str;
+    }
+  
+  
+
 }

@@ -427,4 +427,23 @@ public class ISceneNode extends IAttributeExchangingObject {
     return (cPtr == 0) ? null : new S3DVertex(cPtr, false);
   }
 
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 79 * hash + (int) (this.swigCPtr ^ (this.swigCPtr >>> 32));
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        final ISceneNode other = (ISceneNode) obj;
+        if (this.swigCPtr != other.swigCPtr) {
+            return false;
+        }
+        return true;
+    }
+  
 }
