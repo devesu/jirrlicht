@@ -50538,9 +50538,21 @@ SWIGEXPORT jboolean JNICALL Java_org_swig_jirr_JirrJNI_IVideoDriver_1endScene(JN
   return jresult;
 }
 
+//my function
+SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_IVideoDriver_1setTransformationAsInNode(JNIEnv *jenv, jclass jcls, jlong driverPointer, jlong nodePointer) {
+	IVideoDriver*driver=(IVideoDriver*)driverPointer;
+	if(nodePointer==0){
+		driver->setTransform(video::ETS_WORLD, core::IdentityMatrix);
+	}else{
+		ISceneNode*node=(ISceneNode*)nodePointer;
+		matrix4 transform=node->getAbsoluteTransformation();
+		driver->setTransform(ETS_WORLD, transform);
+	}
+}
+
 SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_IVideoDriver_1resetTransformMatrix(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  irr::video::IVideoDriver *arg1 = (irr::video::IVideoDriver *)  jarg1;
-  (arg1)->setTransform(video::ETS_WORLD, core::IdentityMatrix);
+  irr::video::IVideoDriver *driver = (irr::video::IVideoDriver *)  jarg1;
+  driver->setTransform(video::ETS_WORLD, core::IdentityMatrix);
 }
 
 SWIGEXPORT jboolean JNICALL Java_org_swig_jirr_JirrJNI_IVideoDriver_1queryFeature(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
@@ -57212,12 +57224,9 @@ SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_ISceneCollisionManager_1getS
 
 ///My function
 SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_ISceneCollisionManager_1getSceneNodeFromScreenCoordinatesBB_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong collizionManagerPointer,jlong pointPointer) {
-printf("1111\n");
 	ISceneCollisionManager*collizionManager=(ISceneCollisionManager*)collizionManagerPointer;
 	int refCount=collizionManager->getReferenceCount();
-	printf("refCount=%d\n", refCount);
 	irr::core::vector2d< irr::s32 >*pos=(irr::core::vector2d< irr::s32 >*)pointPointer;
-	printf("position X=%d Y=%d\n", pos->X, pos->Y);
 	ISceneNode*node=collizionManager->getSceneNodeFromScreenCoordinatesBB(*pos);
 	/*if(node==0){
 		printf("Node not Found");

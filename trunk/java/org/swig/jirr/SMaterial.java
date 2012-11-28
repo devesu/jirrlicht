@@ -5,319 +5,345 @@
  * Do not make changes to this file unless you know what you are doing--modify
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
-
 package org.swig.jirr;
 
 public class SMaterial {
-  private long swigCPtr;
-  protected boolean swigCMemOwn;
 
-  protected SMaterial(long cPtr, boolean cMemoryOwn) {
-    swigCMemOwn = cMemoryOwn;
-    swigCPtr = cPtr;
-  }
+    private long swigCPtr;
+    protected boolean swigCMemOwn;
 
-  protected static long getCPtr(SMaterial obj) {
-    return (obj == null) ? 0 : obj.swigCPtr;
-  }
-
-  protected void finalize() {
-    delete();
-  }
-
-  public synchronized void delete() {
-    if (swigCPtr != 0) {
-      if (swigCMemOwn) {
-        swigCMemOwn = false;
-        JirrJNI.delete_SMaterial(swigCPtr);
-      }
-      swigCPtr = 0;
+    protected SMaterial(long cPtr, boolean cMemoryOwn) {
+        swigCMemOwn = cMemoryOwn;
+        swigCPtr = cPtr;
     }
-  }
-
-  public SMaterial() {
-    this(JirrJNI.new_SMaterial__SWIG_0(), true);
-  }
-
-  public SMaterial(SMaterial other) {
-    this(JirrJNI.new_SMaterial__SWIG_1(SMaterial.getCPtr(other), other), true);
-  }
-
-  public SMaterial assignOperator(SMaterial other) {
-    return new SMaterial(JirrJNI.SMaterial_assignOperator(swigCPtr, this, SMaterial.getCPtr(other), other), false);
-  }
-
-  public void setTextureLayer(SWIGTYPE_p_SMaterialLayer value) {
-    JirrJNI.SMaterial_TextureLayer_set(swigCPtr, this, SWIGTYPE_p_SMaterialLayer.getCPtr(value));
-  }
-
-  public SWIGTYPE_p_SMaterialLayer getTextureLayer() {
-    long cPtr = JirrJNI.SMaterial_TextureLayer_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_SMaterialLayer(cPtr, false);
-  }
-
-  public void setMaterialType(SWIGTYPE_p_E_MATERIAL_TYPE value) {
-    JirrJNI.SMaterial_MaterialType_set(swigCPtr, this, SWIGTYPE_p_E_MATERIAL_TYPE.getCPtr(value));
-  }
-
-  public SWIGTYPE_p_E_MATERIAL_TYPE getMaterialType() {
-    return new SWIGTYPE_p_E_MATERIAL_TYPE(JirrJNI.SMaterial_MaterialType_get(swigCPtr, this), true);
-  }
-
-  public SMaterial setAmbientColor(SColor value) {
-    JirrJNI.SMaterial_AmbientColor_set(swigCPtr, this, SColor.getCPtr(value), value);
-    return this;
-  }
-
-  public SColor getAmbientColor() {
-    long cPtr = JirrJNI.SMaterial_AmbientColor_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SColor(cPtr, false);
-  }
-
-  public SMaterial setDiffuseColor(SColor value) {
-    JirrJNI.SMaterial_DiffuseColor_set(swigCPtr, this, SColor.getCPtr(value), value);
-    return this;
-  }
-
-  public SColor getDiffuseColor() {
-    long cPtr = JirrJNI.SMaterial_DiffuseColor_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SColor(cPtr, false);
-  }
-
-  public SMaterial setEmissiveColor(SColor value) {
-    JirrJNI.SMaterial_EmissiveColor_set(swigCPtr, this, SColor.getCPtr(value), value);
-    return this;
-  }
-
-  public SColor getEmissiveColor() {
-    long cPtr = JirrJNI.SMaterial_EmissiveColor_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SColor(cPtr, false);
-  }
-
-  public void setSpecularColor(SColor value) {
-    JirrJNI.SMaterial_SpecularColor_set(swigCPtr, this, SColor.getCPtr(value), value);
-  }
-
-  public SColor getSpecularColor() {
-    long cPtr = JirrJNI.SMaterial_SpecularColor_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SColor(cPtr, false);
-  }
-
-  public void setShininess(float value) {
-    JirrJNI.SMaterial_Shininess_set(swigCPtr, this, value);
-  }
-
-  public float getShininess() {
-    return JirrJNI.SMaterial_Shininess_get(swigCPtr, this);
-  }
-
-  public void setMaterialTypeParam(float value) {
-    JirrJNI.SMaterial_MaterialTypeParam_set(swigCPtr, this, value);
-  }
-
-  public float getMaterialTypeParam() {
-    return JirrJNI.SMaterial_MaterialTypeParam_get(swigCPtr, this);
-  }
-
-  public void setMaterialTypeParam2(float value) {
-    JirrJNI.SMaterial_MaterialTypeParam2_set(swigCPtr, this, value);
-  }
-
-  public float getMaterialTypeParam2() {
-    return JirrJNI.SMaterial_MaterialTypeParam2_get(swigCPtr, this);
-  }
-
-  public void setThickness(float value) {
-    JirrJNI.SMaterial_Thickness_set(swigCPtr, this, value);
-  }
-
-  public float getThickness() {
-    return JirrJNI.SMaterial_Thickness_get(swigCPtr, this);
-  }
-
-  public void setZBuffer(short value) {
-    JirrJNI.SMaterial_ZBuffer_set(swigCPtr, this, value);
-  }
-
-  public short getZBuffer() {
-    return JirrJNI.SMaterial_ZBuffer_get(swigCPtr, this);
-  }
-
-  public void setAntiAliasing(short value) {
-    JirrJNI.SMaterial_AntiAliasing_set(swigCPtr, this, value);
-  }
-
-  public short getAntiAliasing() {
-    return JirrJNI.SMaterial_AntiAliasing_get(swigCPtr, this);
-  }
-
-  public void setColorMask(short value) {
-    JirrJNI.SMaterial_ColorMask_set(swigCPtr, this, value);
-  }
-
-  public short getColorMask() {
-    return JirrJNI.SMaterial_ColorMask_get(swigCPtr, this);
-  }
-
-  public void setColorMaterial(short value) {
-    JirrJNI.SMaterial_ColorMaterial_set(swigCPtr, this, value);
-  }
-
-  public short getColorMaterial() {
-    return JirrJNI.SMaterial_ColorMaterial_get(swigCPtr, this);
-  }
-
-  public void setBlendOperation(E_BLEND_OPERATION value) {
-    JirrJNI.SMaterial_BlendOperation_set(swigCPtr, this, value.swigValue());
-  }
-
-  public E_BLEND_OPERATION getBlendOperation() {
-    return E_BLEND_OPERATION.swigToEnum(JirrJNI.SMaterial_BlendOperation_get(swigCPtr, this));
-  }
-
-  public void setPolygonOffsetFactor(short value) {
-    JirrJNI.SMaterial_PolygonOffsetFactor_set(swigCPtr, this, value);
-  }
-
-  public short getPolygonOffsetFactor() {
-    return JirrJNI.SMaterial_PolygonOffsetFactor_get(swigCPtr, this);
-  }
-
-  public void setPolygonOffsetDirection(E_POLYGON_OFFSET value) {
-    JirrJNI.SMaterial_PolygonOffsetDirection_set(swigCPtr, this, value.swigValue());
-  }
-
-  public E_POLYGON_OFFSET getPolygonOffsetDirection() {
-    return E_POLYGON_OFFSET.swigToEnum(JirrJNI.SMaterial_PolygonOffsetDirection_get(swigCPtr, this));
-  }
-
-  public void setWireframe(boolean value) {
-    JirrJNI.SMaterial_Wireframe_set(swigCPtr, this, value);
-  }
-
-  public boolean getWireframe() {
-    return JirrJNI.SMaterial_Wireframe_get(swigCPtr, this);
-  }
-
-  public void setPointCloud(boolean value) {
-    JirrJNI.SMaterial_PointCloud_set(swigCPtr, this, value);
-  }
-
-  public boolean getPointCloud() {
-    return JirrJNI.SMaterial_PointCloud_get(swigCPtr, this);
-  }
-
-  public void setGouraudShading(boolean value) {
-    JirrJNI.SMaterial_GouraudShading_set(swigCPtr, this, value);
-  }
-
-  public boolean getGouraudShading() {
-    return JirrJNI.SMaterial_GouraudShading_get(swigCPtr, this);
-  }
-
-  public void setLighting(boolean value) {
-    JirrJNI.SMaterial_Lighting_set(swigCPtr, this, value);
-  }
-
-  public boolean getLighting() {
-    return JirrJNI.SMaterial_Lighting_get(swigCPtr, this);
-  }
 
-  public void setZWriteEnable(boolean value) {
-    JirrJNI.SMaterial_ZWriteEnable_set(swigCPtr, this, value);
-  }
-
-  public boolean getZWriteEnable() {
-    return JirrJNI.SMaterial_ZWriteEnable_get(swigCPtr, this);
-  }
-
-  public void setBackfaceCulling(boolean value) {
-    JirrJNI.SMaterial_BackfaceCulling_set(swigCPtr, this, value);
-  }
-
-  public boolean getBackfaceCulling() {
-    return JirrJNI.SMaterial_BackfaceCulling_get(swigCPtr, this);
-  }
-
-  public void setFrontfaceCulling(boolean value) {
-    JirrJNI.SMaterial_FrontfaceCulling_set(swigCPtr, this, value);
-  }
-
-  public boolean getFrontfaceCulling() {
-    return JirrJNI.SMaterial_FrontfaceCulling_get(swigCPtr, this);
-  }
-
-  public void setFogEnable(boolean value) {
-    JirrJNI.SMaterial_FogEnable_set(swigCPtr, this, value);
-  }
-
-  public boolean getFogEnable() {
-    return JirrJNI.SMaterial_FogEnable_get(swigCPtr, this);
-  }
-
-  public void setNormalizeNormals(boolean value) {
-    JirrJNI.SMaterial_NormalizeNormals_set(swigCPtr, this, value);
-  }
-
-  public boolean getNormalizeNormals() {
-    return JirrJNI.SMaterial_NormalizeNormals_get(swigCPtr, this);
-  }
-
-  public void setUseMipMaps(boolean value) {
-    JirrJNI.SMaterial_UseMipMaps_set(swigCPtr, this, value);
-  }
-
-  public boolean getUseMipMaps() {
-    return JirrJNI.SMaterial_UseMipMaps_get(swigCPtr, this);
-  }
-
-  public CMatrix4f getTextureMatrix(long i) {
-    return new CMatrix4f(JirrJNI.SMaterial_getTextureMatrix(swigCPtr, this, i), false);
-  }
-
-  public CMatrix4f getTextureMatrixConst(long i) {
-    return new CMatrix4f(JirrJNI.SMaterial_getTextureMatrixConst(swigCPtr, this, i), false);
-  }
-
-  public void setTextureMatrix(long i, CMatrix4f mat) {
-    JirrJNI.SMaterial_setTextureMatrix(swigCPtr, this, i, CMatrix4f.getCPtr(mat));
-  }
-
-  public ITexture getTexture(long i) {
-    long cPtr = JirrJNI.SMaterial_getTexture(swigCPtr, this, i);
-    return (cPtr == 0) ? null : new ITexture(cPtr, false);
-  }
-
-  public void setTexture(long i, ITexture tex) {
-    JirrJNI.SMaterial_setTexture__SWIG_0(swigCPtr, this, i, ITexture.getCPtr(tex), tex);
-  }
-
-  public void setFlag(SWIGTYPE_p_E_MATERIAL_FLAG flag, boolean value) {
-    JirrJNI.SMaterial_setFlag(swigCPtr, this, SWIGTYPE_p_E_MATERIAL_FLAG.getCPtr(flag), value);
-  }
-
-  public boolean getFlag(SWIGTYPE_p_E_MATERIAL_FLAG flag) {
-    return JirrJNI.SMaterial_getFlag(swigCPtr, this, SWIGTYPE_p_E_MATERIAL_FLAG.getCPtr(flag));
-  }
-
-  public boolean notEqualsOperator(SMaterial b) {
-    return JirrJNI.SMaterial_notEqualsOperator(swigCPtr, this, SMaterial.getCPtr(b), b);
-  }
-
-  public boolean equalsOperator(SMaterial b) {
-    return JirrJNI.SMaterial_equalsOperator(swigCPtr, this, SMaterial.getCPtr(b), b);
-  }
-
-  public boolean isTransparent() {
-    return JirrJNI.SMaterial_isTransparent(swigCPtr, this);
-  }
-
-  public boolean isWireframe() {
-    return JirrJNI.SMaterial_isWireframe(swigCPtr, this);
-  }
-
-  public void setTexture(int index, ITexture texture) {
-    JirrJNI.SMaterial_setTexture__SWIG_1(swigCPtr, this, index, ITexture.getCPtr(texture), texture);
-  }
-
+    protected static long getCPtr(SMaterial obj) {
+        return (obj == null) ? 0 : obj.swigCPtr;
+    }
+
+    protected void finalize() {
+        delete();
+    }
+
+    public synchronized void delete() {
+        if (swigCPtr != 0) {
+            if (swigCMemOwn) {
+                swigCMemOwn = false;
+                JirrJNI.delete_SMaterial(swigCPtr);
+            }
+            swigCPtr = 0;
+        }
+    }
+
+    public SMaterial() {
+        this(JirrJNI.new_SMaterial__SWIG_0(), true);
+    }
+
+    public SMaterial(SMaterial other) {
+        this(JirrJNI.new_SMaterial__SWIG_1(SMaterial.getCPtr(other), other), true);
+    }
+
+    public SMaterial assignOperator(SMaterial other) {
+        return new SMaterial(JirrJNI.SMaterial_assignOperator(swigCPtr, this, SMaterial.getCPtr(other), other), false);
+    }
+
+    public void setTextureLayer(SWIGTYPE_p_SMaterialLayer value) {
+        JirrJNI.SMaterial_TextureLayer_set(swigCPtr, this, SWIGTYPE_p_SMaterialLayer.getCPtr(value));
+    }
+
+    public SWIGTYPE_p_SMaterialLayer getTextureLayer() {
+        long cPtr = JirrJNI.SMaterial_TextureLayer_get(swigCPtr, this);
+        return (cPtr == 0) ? null : new SWIGTYPE_p_SMaterialLayer(cPtr, false);
+    }
+
+    public SMaterial setMaterialType(SWIGTYPE_p_E_MATERIAL_TYPE value) {
+        JirrJNI.SMaterial_MaterialType_set(swigCPtr, this, SWIGTYPE_p_E_MATERIAL_TYPE.getCPtr(value));
+        return this;
+    }
+
+    public SWIGTYPE_p_E_MATERIAL_TYPE getMaterialType() {
+        return new SWIGTYPE_p_E_MATERIAL_TYPE(JirrJNI.SMaterial_MaterialType_get(swigCPtr, this), true);
+    }
+
+    public SMaterial setAmbientColor(SColor value) {
+        JirrJNI.SMaterial_AmbientColor_set(swigCPtr, this, SColor.getCPtr(value), value);
+        return this;
+    }
+
+    public SColor getAmbientColor() {
+        long cPtr = JirrJNI.SMaterial_AmbientColor_get(swigCPtr, this);
+        return (cPtr == 0) ? null : new SColor(cPtr, false);
+    }
+
+    public SMaterial setDiffuseColor(SColor value) {
+        JirrJNI.SMaterial_DiffuseColor_set(swigCPtr, this, SColor.getCPtr(value), value);
+        return this;
+    }
+
+    public SColor getDiffuseColor() {
+        long cPtr = JirrJNI.SMaterial_DiffuseColor_get(swigCPtr, this);
+        return (cPtr == 0) ? null : new SColor(cPtr, false);
+    }
+
+    public SMaterial setEmissiveColor(SColor value) {
+        JirrJNI.SMaterial_EmissiveColor_set(swigCPtr, this, SColor.getCPtr(value), value);
+        return this;
+    }
+
+    public SColor getEmissiveColor() {
+        long cPtr = JirrJNI.SMaterial_EmissiveColor_get(swigCPtr, this);
+        return (cPtr == 0) ? null : new SColor(cPtr, false);
+    }
+
+    public SMaterial setSpecularColor(SColor value) {
+        JirrJNI.SMaterial_SpecularColor_set(swigCPtr, this, SColor.getCPtr(value), value);
+        return this;
+    }
+
+    public SColor getSpecularColor() {
+        long cPtr = JirrJNI.SMaterial_SpecularColor_get(swigCPtr, this);
+        return (cPtr == 0) ? null : new SColor(cPtr, false);
+    }
+
+    public SMaterial setShininess(float value) {
+        JirrJNI.SMaterial_Shininess_set(swigCPtr, this, value);
+        return this;
+    }
+
+    public float getShininess() {
+        return JirrJNI.SMaterial_Shininess_get(swigCPtr, this);
+    }
+
+    public SMaterial setMaterialTypeParam(float value) {
+        JirrJNI.SMaterial_MaterialTypeParam_set(swigCPtr, this, value);
+        return this;
+    }
+
+    public float getMaterialTypeParam() {
+        return JirrJNI.SMaterial_MaterialTypeParam_get(swigCPtr, this);
+    }
+
+    public SMaterial setMaterialTypeParam2(float value) {
+        JirrJNI.SMaterial_MaterialTypeParam2_set(swigCPtr, this, value);
+        return this;
+    }
+
+    public float getMaterialTypeParam2() {
+        return JirrJNI.SMaterial_MaterialTypeParam2_get(swigCPtr, this);
+    }
+
+    public SMaterial setThickness(float value) {
+        JirrJNI.SMaterial_Thickness_set(swigCPtr, this, value);
+        return this;
+    }
+
+    public float getThickness() {
+        return JirrJNI.SMaterial_Thickness_get(swigCPtr, this);
+    }
+
+    public SMaterial setZBuffer(short value) {
+        JirrJNI.SMaterial_ZBuffer_set(swigCPtr, this, value);
+        return this;
+    }
+
+    public short getZBuffer() {
+        return JirrJNI.SMaterial_ZBuffer_get(swigCPtr, this);
+    }
+
+    public SMaterial setAntiAliasing(short value) {
+        JirrJNI.SMaterial_AntiAliasing_set(swigCPtr, this, value);
+        return this;
+    }
+
+    public short getAntiAliasing() {
+        return JirrJNI.SMaterial_AntiAliasing_get(swigCPtr, this);
+    }
+
+    public SMaterial setColorMask(short value) {
+        JirrJNI.SMaterial_ColorMask_set(swigCPtr, this, value);
+        return this;
+    }
+
+    public short getColorMask() {
+        return JirrJNI.SMaterial_ColorMask_get(swigCPtr, this);
+    }
+
+    public SMaterial setColorMaterial(short value) {
+        JirrJNI.SMaterial_ColorMaterial_set(swigCPtr, this, value);
+        return this;
+    }
+
+    public short getColorMaterial() {
+        return JirrJNI.SMaterial_ColorMaterial_get(swigCPtr, this);
+    }
+
+    public SMaterial setBlendOperation(E_BLEND_OPERATION value) {
+        JirrJNI.SMaterial_BlendOperation_set(swigCPtr, this, value.swigValue());
+        return this;
+    }
+
+    public E_BLEND_OPERATION getBlendOperation() {
+        return E_BLEND_OPERATION.swigToEnum(JirrJNI.SMaterial_BlendOperation_get(swigCPtr, this));
+    }
+
+    public SMaterial setPolygonOffsetFactor(short value) {
+        JirrJNI.SMaterial_PolygonOffsetFactor_set(swigCPtr, this, value);
+        return this;
+    }
+
+    public short getPolygonOffsetFactor() {
+        return JirrJNI.SMaterial_PolygonOffsetFactor_get(swigCPtr, this);
+    }
+
+    public SMaterial setPolygonOffsetDirection(E_POLYGON_OFFSET value) {
+        JirrJNI.SMaterial_PolygonOffsetDirection_set(swigCPtr, this, value.swigValue());
+        return this;
+    }
+
+    public E_POLYGON_OFFSET getPolygonOffsetDirection() {
+        return E_POLYGON_OFFSET.swigToEnum(JirrJNI.SMaterial_PolygonOffsetDirection_get(swigCPtr, this));
+    }
+
+    public SMaterial setWireframe(boolean value) {
+        JirrJNI.SMaterial_Wireframe_set(swigCPtr, this, value);
+        return this;
+    }
+
+    public boolean getWireframe() {
+        return JirrJNI.SMaterial_Wireframe_get(swigCPtr, this);
+    }
+
+    public SMaterial setPointCloud(boolean value) {
+        JirrJNI.SMaterial_PointCloud_set(swigCPtr, this, value);
+        return this;
+    }
+
+    public boolean getPointCloud() {
+        return JirrJNI.SMaterial_PointCloud_get(swigCPtr, this);
+    }
+
+    public SMaterial setGouraudShading(boolean value) {
+        JirrJNI.SMaterial_GouraudShading_set(swigCPtr, this, value);
+        return this;
+    }
+
+    public boolean getGouraudShading() {
+        return JirrJNI.SMaterial_GouraudShading_get(swigCPtr, this);
+    }
+
+    public SMaterial setLighting(boolean value) {
+        JirrJNI.SMaterial_Lighting_set(swigCPtr, this, value);
+        return this;
+    }
+
+    public boolean getLighting() {
+        return JirrJNI.SMaterial_Lighting_get(swigCPtr, this);
+    }
+
+    public SMaterial setZWriteEnable(boolean value) {
+        JirrJNI.SMaterial_ZWriteEnable_set(swigCPtr, this, value);
+        return this;
+    }
+
+    public boolean getZWriteEnable() {
+        return JirrJNI.SMaterial_ZWriteEnable_get(swigCPtr, this);
+    }
+
+    public SMaterial setBackfaceCulling(boolean value) {
+        JirrJNI.SMaterial_BackfaceCulling_set(swigCPtr, this, value);
+        return this;
+    }
+
+    public boolean getBackfaceCulling() {
+        return JirrJNI.SMaterial_BackfaceCulling_get(swigCPtr, this);
+    }
+
+    public SMaterial setFrontfaceCulling(boolean value) {
+        JirrJNI.SMaterial_FrontfaceCulling_set(swigCPtr, this, value);
+        return this;
+    }
+
+    public boolean getFrontfaceCulling() {
+        return JirrJNI.SMaterial_FrontfaceCulling_get(swigCPtr, this);
+    }
+
+    public SMaterial setFogEnable(boolean value) {
+        JirrJNI.SMaterial_FogEnable_set(swigCPtr, this, value);
+        return this;
+    }
+
+    public boolean getFogEnable() {
+        return JirrJNI.SMaterial_FogEnable_get(swigCPtr, this);
+    }
+
+    public SMaterial setNormalizeNormals(boolean value) {
+        JirrJNI.SMaterial_NormalizeNormals_set(swigCPtr, this, value);
+        return this;
+    }
+
+    public boolean getNormalizeNormals() {
+        return JirrJNI.SMaterial_NormalizeNormals_get(swigCPtr, this);
+    }
+
+    public SMaterial setUseMipMaps(boolean value) {
+        JirrJNI.SMaterial_UseMipMaps_set(swigCPtr, this, value);
+        return this;
+    }
+
+    public boolean getUseMipMaps() {
+        return JirrJNI.SMaterial_UseMipMaps_get(swigCPtr, this);
+    }
+
+    public CMatrix4f getTextureMatrix(long i) {
+        return new CMatrix4f(JirrJNI.SMaterial_getTextureMatrix(swigCPtr, this, i), false);
+    }
+
+    public CMatrix4f getTextureMatrixConst(long i) {
+        return new CMatrix4f(JirrJNI.SMaterial_getTextureMatrixConst(swigCPtr, this, i), false);
+    }
+
+    public SMaterial setTextureMatrix(long i, CMatrix4f mat) {
+        JirrJNI.SMaterial_setTextureMatrix(swigCPtr, this, i, CMatrix4f.getCPtr(mat));
+        return this;
+    }
+
+    public ITexture getTexture(long i) {
+        long cPtr = JirrJNI.SMaterial_getTexture(swigCPtr, this, i);
+        return (cPtr == 0) ? null : new ITexture(cPtr, false);
+    }
+
+    public SMaterial setTexture(long i, ITexture tex) {
+        JirrJNI.SMaterial_setTexture__SWIG_0(swigCPtr, this, i, ITexture.getCPtr(tex), tex);
+        return this;
+    }
+
+    public SMaterial setFlag(SWIGTYPE_p_E_MATERIAL_FLAG flag, boolean value) {
+        JirrJNI.SMaterial_setFlag(swigCPtr, this, SWIGTYPE_p_E_MATERIAL_FLAG.getCPtr(flag), value);
+        return this;
+    }
+
+    public boolean getFlag(SWIGTYPE_p_E_MATERIAL_FLAG flag) {
+        return JirrJNI.SMaterial_getFlag(swigCPtr, this, SWIGTYPE_p_E_MATERIAL_FLAG.getCPtr(flag));
+    }
+
+    public boolean notEqualsOperator(SMaterial b) {
+        return JirrJNI.SMaterial_notEqualsOperator(swigCPtr, this, SMaterial.getCPtr(b), b);
+    }
+
+    public boolean equalsOperator(SMaterial b) {
+        return JirrJNI.SMaterial_equalsOperator(swigCPtr, this, SMaterial.getCPtr(b), b);
+    }
+
+    public boolean isTransparent() {
+        return JirrJNI.SMaterial_isTransparent(swigCPtr, this);
+    }
+
+    public boolean isWireframe() {
+        return JirrJNI.SMaterial_isWireframe(swigCPtr, this);
+    }
+
+    public SMaterial setTexture(int index, ITexture texture) {
+        JirrJNI.SMaterial_setTexture__SWIG_1(swigCPtr, this, index, ITexture.getCPtr(texture), texture);
+        return this;
+    }
 }
