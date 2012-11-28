@@ -57210,25 +57210,23 @@ SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_ISceneCollisionManager_1getS
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_ISceneCollisionManager_1getSceneNodeFromScreenCoordinatesBB_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
-  jlong jresult = 0 ;
-  irr::scene::ISceneCollisionManager *arg1 = (irr::scene::ISceneCollisionManager *) 0 ;
-  irr::core::vector2d< irr::s32 > *arg2 = 0 ;
-  irr::scene::ISceneNode *result = 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  (void)jarg2_;
-  arg1 = *(irr::scene::ISceneCollisionManager **)&jarg1; 
-  arg2 = *(irr::core::vector2d< irr::s32 > **)&jarg2;
-  if (!arg2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "irr::core::vector2d< irr::s32 > const & reference is null");
-    return 0;
-  } 
-  result = (irr::scene::ISceneNode *)(arg1)->getSceneNodeFromScreenCoordinatesBB((irr::core::vector2d< irr::s32 > const &)*arg2);
-  *(irr::scene::ISceneNode **)&jresult = result; 
-  return jresult;
+///My function
+SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_ISceneCollisionManager_1getSceneNodeFromScreenCoordinatesBB_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong collizionManagerPointer,jlong pointPointer) {
+printf("1111\n");
+	ISceneCollisionManager*collizionManager=(ISceneCollisionManager*)collizionManagerPointer;
+	int refCount=collizionManager->getReferenceCount();
+	printf("refCount=%d\n", refCount);
+	irr::core::vector2d< irr::s32 >*pos=(irr::core::vector2d< irr::s32 >*)pointPointer;
+	printf("position X=%d Y=%d\n", pos->X, pos->Y);
+	ISceneNode*node=collizionManager->getSceneNodeFromScreenCoordinatesBB(*pos);
+	/*if(node==0){
+		printf("Node not Found");
+	}else{
+		printf("Node found");
+	}
+	fflush(stdout);*/
+	return 0;
+	//return (jlong)node;
 }
 
 
