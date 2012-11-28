@@ -27220,6 +27220,23 @@ SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_ISceneNode_1setRotation(JNIEn
   (arg1)->setRotation((irr::core::vector3df const &)*arg2);
 }
 
+SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_ISceneNode_1setLocalRotation(JNIEnv *jenv, jclass jcls, jlong nodePointer, jlong rotVectorPointer) {
+  ISceneNode*node=(ISceneNode*)nodePointer;
+  vector3df*vector=(vector3df*)rotVectorPointer;
+
+  irr::core::matrix4 m;
+
+    m = node->getAbsoluteTransformation();
+
+    irr::core::matrix4 n;
+    n.setRotationDegrees(*vector);
+
+    m *= n;
+
+    node->setRotation(m.getRotationDegrees());
+    node->updateAbsolutePosition();
+}
+
 
 SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_ISceneNode_1setRotationSwigExplicitISceneNode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   irr::scene::ISceneNode *arg1 = (irr::scene::ISceneNode *) 0 ;
