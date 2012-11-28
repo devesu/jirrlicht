@@ -2539,7 +2539,7 @@ public class JirrJNI {
   public final static native long ISceneCollisionManager_getSceneNodeFromScreenCoordinatesBB__SWIG_0(long jarg1, ISceneCollisionManager jarg1_, long jarg2, vector2di jarg2_, int jarg3, boolean jarg4, long jarg5, ISceneNode jarg5_);
   public final static native long ISceneCollisionManager_getSceneNodeFromScreenCoordinatesBB__SWIG_1(long jarg1, ISceneCollisionManager jarg1_, long jarg2, vector2di jarg2_, int jarg3, boolean jarg4);
   public final static native long ISceneCollisionManager_getSceneNodeFromScreenCoordinatesBB__SWIG_2(long jarg1, ISceneCollisionManager jarg1_, long jarg2, vector2di jarg2_, int jarg3);
-  public final static native long ISceneCollisionManager_getSceneNodeFromScreenCoordinatesBB__SWIG_3(long jarg1, ISceneCollisionManager jarg1_, long jarg2, vector2di jarg2_);
+  public final static native long ISceneCollisionManager_getSceneNodeFromScreenCoordinatesBB__SWIG_3(long collizionManagerPointer,long pointPinter);
   public final static native long ISceneCollisionManager_getSceneNodeFromRayBB__SWIG_0(long jarg1, ISceneCollisionManager jarg1_, long jarg2, line3df jarg2_, int jarg3, boolean jarg4, long jarg5, ISceneNode jarg5_);
   public final static native long ISceneCollisionManager_getSceneNodeFromRayBB__SWIG_1(long jarg1, ISceneCollisionManager jarg1_, long jarg2, line3df jarg2_, int jarg3, boolean jarg4);
   public final static native long ISceneCollisionManager_getSceneNodeFromRayBB__SWIG_2(long jarg1, ISceneCollisionManager jarg1_, long jarg2, line3df jarg2_, int jarg3);

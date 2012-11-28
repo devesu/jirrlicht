@@ -5,145 +5,148 @@
  * Do not make changes to this file unless you know what you are doing--modify
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
-
 package org.swig.jirr;
 
 public class ISceneCollisionManager {
-  private long swigCPtr;
-  protected boolean swigCMemOwn;
 
-  protected ISceneCollisionManager(long cPtr, boolean cMemoryOwn) {
-    swigCMemOwn = cMemoryOwn;
-    swigCPtr = cPtr;
-  }
+    private long swigCPtr;
+    protected boolean swigCMemOwn;
 
-  protected static long getCPtr(ISceneCollisionManager obj) {
-    return (obj == null) ? 0 : obj.swigCPtr;
-  }
-
-  protected void finalize() {
-    delete();
-  }
-
-  public synchronized void delete() {
-    if (swigCPtr != 0) {
-      if (swigCMemOwn) {
-        swigCMemOwn = false;
-        JirrJNI.delete_ISceneCollisionManager(swigCPtr);
-      }
-      swigCPtr = 0;
+    protected ISceneCollisionManager(long cPtr, boolean cMemoryOwn) {
+        swigCMemOwn = cMemoryOwn;
+        swigCPtr = cPtr;
     }
-  }
 
-  public boolean getCollisionPoint(line3df ray, ITriangleSelector selector, vector3df outCollisionPoint, triangle3df outTriangle, ISceneNode outNode) {
-    return JirrJNI.ISceneCollisionManager_getCollisionPoint(swigCPtr, this, line3df.getCPtr(ray), ray, ITriangleSelector.getCPtr(selector), selector, vector3df.getCPtr(outCollisionPoint), outCollisionPoint, triangle3df.getCPtr(outTriangle), outTriangle, ISceneNode.getCPtr(outNode), outNode);
-  }
+    protected static long getCPtr(ISceneCollisionManager obj) {
+        return (obj == null) ? 0 : obj.swigCPtr;
+    }
 
-  public vector3df getCollisionResultPosition(ITriangleSelector selector, vector3df ellipsoidPosition, vector3df ellipsoidRadius, vector3df ellipsoidDirectionAndSpeed, triangle3df triout, vector3df hitPosition, SWIGTYPE_p_bool outFalling, ISceneNode outNode, float slidingSpeed, vector3df gravityDirectionAndSpeed) {
-    return new vector3df(JirrJNI.ISceneCollisionManager_getCollisionResultPosition__SWIG_0(swigCPtr, this, ITriangleSelector.getCPtr(selector), selector, vector3df.getCPtr(ellipsoidPosition), ellipsoidPosition, vector3df.getCPtr(ellipsoidRadius), ellipsoidRadius, vector3df.getCPtr(ellipsoidDirectionAndSpeed), ellipsoidDirectionAndSpeed, triangle3df.getCPtr(triout), triout, vector3df.getCPtr(hitPosition), hitPosition, SWIGTYPE_p_bool.getCPtr(outFalling), ISceneNode.getCPtr(outNode), outNode, slidingSpeed, vector3df.getCPtr(gravityDirectionAndSpeed), gravityDirectionAndSpeed), true);
-  }
+    protected void finalize() {
+        delete();
+    }
 
-  public vector3df getCollisionResultPosition(ITriangleSelector selector, vector3df ellipsoidPosition, vector3df ellipsoidRadius, vector3df ellipsoidDirectionAndSpeed, triangle3df triout, vector3df hitPosition, SWIGTYPE_p_bool outFalling, ISceneNode outNode, float slidingSpeed) {
-    return new vector3df(JirrJNI.ISceneCollisionManager_getCollisionResultPosition__SWIG_1(swigCPtr, this, ITriangleSelector.getCPtr(selector), selector, vector3df.getCPtr(ellipsoidPosition), ellipsoidPosition, vector3df.getCPtr(ellipsoidRadius), ellipsoidRadius, vector3df.getCPtr(ellipsoidDirectionAndSpeed), ellipsoidDirectionAndSpeed, triangle3df.getCPtr(triout), triout, vector3df.getCPtr(hitPosition), hitPosition, SWIGTYPE_p_bool.getCPtr(outFalling), ISceneNode.getCPtr(outNode), outNode, slidingSpeed), true);
-  }
+    public synchronized void delete() {
+        if (swigCPtr != 0) {
+            if (swigCMemOwn) {
+                swigCMemOwn = false;
+                JirrJNI.delete_ISceneCollisionManager(swigCPtr);
+            }
+            swigCPtr = 0;
+        }
+    }
 
-  public vector3df getCollisionResultPosition(ITriangleSelector selector, vector3df ellipsoidPosition, vector3df ellipsoidRadius, vector3df ellipsoidDirectionAndSpeed, triangle3df triout, vector3df hitPosition, SWIGTYPE_p_bool outFalling, ISceneNode outNode) {
-    return new vector3df(JirrJNI.ISceneCollisionManager_getCollisionResultPosition__SWIG_2(swigCPtr, this, ITriangleSelector.getCPtr(selector), selector, vector3df.getCPtr(ellipsoidPosition), ellipsoidPosition, vector3df.getCPtr(ellipsoidRadius), ellipsoidRadius, vector3df.getCPtr(ellipsoidDirectionAndSpeed), ellipsoidDirectionAndSpeed, triangle3df.getCPtr(triout), triout, vector3df.getCPtr(hitPosition), hitPosition, SWIGTYPE_p_bool.getCPtr(outFalling), ISceneNode.getCPtr(outNode), outNode), true);
-  }
+    public boolean getCollisionPoint(line3df ray, ITriangleSelector selector, vector3df outCollisionPoint, triangle3df outTriangle, ISceneNode outNode) {
+        return JirrJNI.ISceneCollisionManager_getCollisionPoint(swigCPtr, this, line3df.getCPtr(ray), ray, ITriangleSelector.getCPtr(selector), selector, vector3df.getCPtr(outCollisionPoint), outCollisionPoint, triangle3df.getCPtr(outTriangle), outTriangle, ISceneNode.getCPtr(outNode), outNode);
+    }
 
-  public line3df getRayFromScreenCoordinates(vector2di pos, ICameraSceneNode camera) {
-    return new line3df(JirrJNI.ISceneCollisionManager_getRayFromScreenCoordinates__SWIG_0(swigCPtr, this, vector2di.getCPtr(pos), pos, ICameraSceneNode.getCPtr(camera), camera), true);
-  }
+    public vector3df getCollisionResultPosition(ITriangleSelector selector, vector3df ellipsoidPosition, vector3df ellipsoidRadius, vector3df ellipsoidDirectionAndSpeed, triangle3df triout, vector3df hitPosition, SWIGTYPE_p_bool outFalling, ISceneNode outNode, float slidingSpeed, vector3df gravityDirectionAndSpeed) {
+        return new vector3df(JirrJNI.ISceneCollisionManager_getCollisionResultPosition__SWIG_0(swigCPtr, this, ITriangleSelector.getCPtr(selector), selector, vector3df.getCPtr(ellipsoidPosition), ellipsoidPosition, vector3df.getCPtr(ellipsoidRadius), ellipsoidRadius, vector3df.getCPtr(ellipsoidDirectionAndSpeed), ellipsoidDirectionAndSpeed, triangle3df.getCPtr(triout), triout, vector3df.getCPtr(hitPosition), hitPosition, SWIGTYPE_p_bool.getCPtr(outFalling), ISceneNode.getCPtr(outNode), outNode, slidingSpeed, vector3df.getCPtr(gravityDirectionAndSpeed), gravityDirectionAndSpeed), true);
+    }
 
-  public line3df getRayFromScreenCoordinates(vector2di pos) {
-    return new line3df(JirrJNI.ISceneCollisionManager_getRayFromScreenCoordinates__SWIG_1(swigCPtr, this, vector2di.getCPtr(pos), pos), true);
-  }
+    public vector3df getCollisionResultPosition(ITriangleSelector selector, vector3df ellipsoidPosition, vector3df ellipsoidRadius, vector3df ellipsoidDirectionAndSpeed, triangle3df triout, vector3df hitPosition, SWIGTYPE_p_bool outFalling, ISceneNode outNode, float slidingSpeed) {
+        return new vector3df(JirrJNI.ISceneCollisionManager_getCollisionResultPosition__SWIG_1(swigCPtr, this, ITriangleSelector.getCPtr(selector), selector, vector3df.getCPtr(ellipsoidPosition), ellipsoidPosition, vector3df.getCPtr(ellipsoidRadius), ellipsoidRadius, vector3df.getCPtr(ellipsoidDirectionAndSpeed), ellipsoidDirectionAndSpeed, triangle3df.getCPtr(triout), triout, vector3df.getCPtr(hitPosition), hitPosition, SWIGTYPE_p_bool.getCPtr(outFalling), ISceneNode.getCPtr(outNode), outNode, slidingSpeed), true);
+    }
 
-  public vector2di getScreenCoordinatesFrom3DPosition(vector3df pos, ICameraSceneNode camera, boolean useViewPort) {
-    return new vector2di(JirrJNI.ISceneCollisionManager_getScreenCoordinatesFrom3DPosition__SWIG_0(swigCPtr, this, vector3df.getCPtr(pos), pos, ICameraSceneNode.getCPtr(camera), camera, useViewPort), true);
-  }
+    public vector3df getCollisionResultPosition(ITriangleSelector selector, vector3df ellipsoidPosition, vector3df ellipsoidRadius, vector3df ellipsoidDirectionAndSpeed, triangle3df triout, vector3df hitPosition, SWIGTYPE_p_bool outFalling, ISceneNode outNode) {
+        return new vector3df(JirrJNI.ISceneCollisionManager_getCollisionResultPosition__SWIG_2(swigCPtr, this, ITriangleSelector.getCPtr(selector), selector, vector3df.getCPtr(ellipsoidPosition), ellipsoidPosition, vector3df.getCPtr(ellipsoidRadius), ellipsoidRadius, vector3df.getCPtr(ellipsoidDirectionAndSpeed), ellipsoidDirectionAndSpeed, triangle3df.getCPtr(triout), triout, vector3df.getCPtr(hitPosition), hitPosition, SWIGTYPE_p_bool.getCPtr(outFalling), ISceneNode.getCPtr(outNode), outNode), true);
+    }
 
-  public vector2di getScreenCoordinatesFrom3DPosition(vector3df pos, ICameraSceneNode camera) {
-    return new vector2di(JirrJNI.ISceneCollisionManager_getScreenCoordinatesFrom3DPosition__SWIG_1(swigCPtr, this, vector3df.getCPtr(pos), pos, ICameraSceneNode.getCPtr(camera), camera), true);
-  }
+    public line3df getRayFromScreenCoordinates(vector2di pos, ICameraSceneNode camera) {
+        return new line3df(JirrJNI.ISceneCollisionManager_getRayFromScreenCoordinates__SWIG_0(swigCPtr, this, vector2di.getCPtr(pos), pos, ICameraSceneNode.getCPtr(camera), camera), true);
+    }
 
-  public vector2di getScreenCoordinatesFrom3DPosition(vector3df pos) {
-    return new vector2di(JirrJNI.ISceneCollisionManager_getScreenCoordinatesFrom3DPosition__SWIG_2(swigCPtr, this, vector3df.getCPtr(pos), pos), true);
-  }
+    public line3df getRayFromScreenCoordinates(vector2di pos) {
+        long ray = JirrJNI.ISceneCollisionManager_getRayFromScreenCoordinates__SWIG_1(swigCPtr, this, vector2di.getCPtr(pos), pos);
+        return new line3df(ray, true);
+    }
 
-  public ISceneNode getSceneNodeFromScreenCoordinatesBB(vector2di pos, int idBitMask, boolean bNoDebugObjects, ISceneNode root) {
-    long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromScreenCoordinatesBB__SWIG_0(swigCPtr, this, vector2di.getCPtr(pos), pos, idBitMask, bNoDebugObjects, ISceneNode.getCPtr(root), root);
-    return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
-  }
+    public vector2di getScreenCoordinatesFrom3DPosition(vector3df pos, ICameraSceneNode camera, boolean useViewPort) {
+        return new vector2di(JirrJNI.ISceneCollisionManager_getScreenCoordinatesFrom3DPosition__SWIG_0(swigCPtr, this, vector3df.getCPtr(pos), pos, ICameraSceneNode.getCPtr(camera), camera, useViewPort), true);
+    }
 
-  public ISceneNode getSceneNodeFromScreenCoordinatesBB(vector2di pos, int idBitMask, boolean bNoDebugObjects) {
-    long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromScreenCoordinatesBB__SWIG_1(swigCPtr, this, vector2di.getCPtr(pos), pos, idBitMask, bNoDebugObjects);
-    return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
-  }
+    public vector2di getScreenCoordinatesFrom3DPosition(vector3df pos, ICameraSceneNode camera) {
+        return new vector2di(JirrJNI.ISceneCollisionManager_getScreenCoordinatesFrom3DPosition__SWIG_1(swigCPtr, this, vector3df.getCPtr(pos), pos, ICameraSceneNode.getCPtr(camera), camera), true);
+    }
 
-  public ISceneNode getSceneNodeFromScreenCoordinatesBB(vector2di pos, int idBitMask) {
-    long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromScreenCoordinatesBB__SWIG_2(swigCPtr, this, vector2di.getCPtr(pos), pos, idBitMask);
-    return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
-  }
+    public vector2di getScreenCoordinatesFrom3DPosition(vector3df pos) {
+        return new vector2di(JirrJNI.ISceneCollisionManager_getScreenCoordinatesFrom3DPosition__SWIG_2(swigCPtr, this, vector3df.getCPtr(pos), pos), true);
+    }
 
-  public ISceneNode getSceneNodeFromScreenCoordinatesBB(vector2di pos) {
-    long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromScreenCoordinatesBB__SWIG_3(swigCPtr, this, vector2di.getCPtr(pos), pos);
-    return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
-  }
+    public ISceneNode getSceneNodeFromScreenCoordinatesBB(vector2di pos, int idBitMask, boolean bNoDebugObjects, ISceneNode root) {
+        long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromScreenCoordinatesBB__SWIG_0(swigCPtr, this, vector2di.getCPtr(pos), pos, idBitMask, bNoDebugObjects, ISceneNode.getCPtr(root), root);
+        return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
+    }
 
-  public ISceneNode getSceneNodeFromRayBB(line3df ray, int idBitMask, boolean bNoDebugObjects, ISceneNode root) {
-    long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromRayBB__SWIG_0(swigCPtr, this, line3df.getCPtr(ray), ray, idBitMask, bNoDebugObjects, ISceneNode.getCPtr(root), root);
-    return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
-  }
+    public ISceneNode getSceneNodeFromScreenCoordinatesBB(vector2di pos, int idBitMask, boolean bNoDebugObjects) {
+        long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromScreenCoordinatesBB__SWIG_1(swigCPtr, this, vector2di.getCPtr(pos), pos, idBitMask, bNoDebugObjects);
+        return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
+    }
 
-  public ISceneNode getSceneNodeFromRayBB(line3df ray, int idBitMask, boolean bNoDebugObjects) {
-    long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromRayBB__SWIG_1(swigCPtr, this, line3df.getCPtr(ray), ray, idBitMask, bNoDebugObjects);
-    return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
-  }
+    public ISceneNode getSceneNodeFromScreenCoordinatesBB(vector2di pos, int idBitMask) {
+        long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromScreenCoordinatesBB__SWIG_2(swigCPtr, this, vector2di.getCPtr(pos), pos, idBitMask);
+        return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
+    }
 
-  public ISceneNode getSceneNodeFromRayBB(line3df ray, int idBitMask) {
-    long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromRayBB__SWIG_2(swigCPtr, this, line3df.getCPtr(ray), ray, idBitMask);
-    return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
-  }
+    /**
+     * Should work
+     */
+    public ISceneNode getSceneNodeFromScreenCoordinatesBB(vector2di pos) {
+        long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromScreenCoordinatesBB__SWIG_3(swigCPtr,vector2di.getCPtr(pos));
+        return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
+    }
 
-  public ISceneNode getSceneNodeFromRayBB(line3df ray) {
-    long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromRayBB__SWIG_3(swigCPtr, this, line3df.getCPtr(ray), ray);
-    return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
-  }
+    public ISceneNode getSceneNodeFromRayBB(line3df ray, int idBitMask, boolean bNoDebugObjects, ISceneNode root) {
+        long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromRayBB__SWIG_0(swigCPtr, this, line3df.getCPtr(ray), ray, idBitMask, bNoDebugObjects, ISceneNode.getCPtr(root), root);
+        return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
+    }
 
-  public ISceneNode getSceneNodeFromCameraBB(ICameraSceneNode camera, int idBitMask, boolean bNoDebugObjects) {
-    long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromCameraBB__SWIG_0(swigCPtr, this, ICameraSceneNode.getCPtr(camera), camera, idBitMask, bNoDebugObjects);
-    return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
-  }
+    public ISceneNode getSceneNodeFromRayBB(line3df ray, int idBitMask, boolean bNoDebugObjects) {
+        long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromRayBB__SWIG_1(swigCPtr, this, line3df.getCPtr(ray), ray, idBitMask, bNoDebugObjects);
+        return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
+    }
 
-  public ISceneNode getSceneNodeFromCameraBB(ICameraSceneNode camera, int idBitMask) {
-    long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromCameraBB__SWIG_1(swigCPtr, this, ICameraSceneNode.getCPtr(camera), camera, idBitMask);
-    return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
-  }
+    public ISceneNode getSceneNodeFromRayBB(line3df ray, int idBitMask) {
+        long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromRayBB__SWIG_2(swigCPtr, this, line3df.getCPtr(ray), ray, idBitMask);
+        return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
+    }
 
-  public ISceneNode getSceneNodeFromCameraBB(ICameraSceneNode camera) {
-    long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromCameraBB__SWIG_2(swigCPtr, this, ICameraSceneNode.getCPtr(camera), camera);
-    return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
-  }
+    public ISceneNode getSceneNodeFromRayBB(line3df ray) {
+        long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromRayBB__SWIG_3(swigCPtr, this, line3df.getCPtr(ray), ray);
+        return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
+    }
 
-  public ISceneNode getSceneNodeAndCollisionPointFromRay(line3df ray, vector3df outCollisionPoint, triangle3df outTriangle, int idBitMask, ISceneNode collisionRootNode, boolean noDebugObjects) {
-    long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeAndCollisionPointFromRay__SWIG_0(swigCPtr, this, line3df.getCPtr(ray), ray, vector3df.getCPtr(outCollisionPoint), outCollisionPoint, triangle3df.getCPtr(outTriangle), outTriangle, idBitMask, ISceneNode.getCPtr(collisionRootNode), collisionRootNode, noDebugObjects);
-    return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
-  }
+    public ISceneNode getSceneNodeFromCameraBB(ICameraSceneNode camera, int idBitMask, boolean bNoDebugObjects) {
+        long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromCameraBB__SWIG_0(swigCPtr, this, ICameraSceneNode.getCPtr(camera), camera, idBitMask, bNoDebugObjects);
+        return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
+    }
 
-  public ISceneNode getSceneNodeAndCollisionPointFromRay(line3df ray, vector3df outCollisionPoint, triangle3df outTriangle, int idBitMask, ISceneNode collisionRootNode) {
-    long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeAndCollisionPointFromRay__SWIG_1(swigCPtr, this, line3df.getCPtr(ray), ray, vector3df.getCPtr(outCollisionPoint), outCollisionPoint, triangle3df.getCPtr(outTriangle), outTriangle, idBitMask, ISceneNode.getCPtr(collisionRootNode), collisionRootNode);
-    return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
-  }
+    public ISceneNode getSceneNodeFromCameraBB(ICameraSceneNode camera, int idBitMask) {
+        long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromCameraBB__SWIG_1(swigCPtr, this, ICameraSceneNode.getCPtr(camera), camera, idBitMask);
+        return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
+    }
 
-  public ISceneNode getSceneNodeAndCollisionPointFromRay(line3df ray, vector3df outCollisionPoint, triangle3df outTriangle, int idBitMask) {
-    long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeAndCollisionPointFromRay__SWIG_2(swigCPtr, this, line3df.getCPtr(ray), ray, vector3df.getCPtr(outCollisionPoint), outCollisionPoint, triangle3df.getCPtr(outTriangle), outTriangle, idBitMask);
-    return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
-  }
+    public ISceneNode getSceneNodeFromCameraBB(ICameraSceneNode camera) {
+        long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeFromCameraBB__SWIG_2(swigCPtr, this, ICameraSceneNode.getCPtr(camera), camera);
+        return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
+    }
 
-  public ISceneNode getSceneNodeAndCollisionPointFromRay(line3df ray, vector3df outCollisionPoint, triangle3df outTriangle) {
-    long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeAndCollisionPointFromRay__SWIG_3(swigCPtr, this, line3df.getCPtr(ray), ray, vector3df.getCPtr(outCollisionPoint), outCollisionPoint, triangle3df.getCPtr(outTriangle), outTriangle);
-    return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
-  }
+    public ISceneNode getSceneNodeAndCollisionPointFromRay(line3df ray, vector3df outCollisionPoint, triangle3df outTriangle, int idBitMask, ISceneNode collisionRootNode, boolean noDebugObjects) {
+        long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeAndCollisionPointFromRay__SWIG_0(swigCPtr, this, line3df.getCPtr(ray), ray, vector3df.getCPtr(outCollisionPoint), outCollisionPoint, triangle3df.getCPtr(outTriangle), outTriangle, idBitMask, ISceneNode.getCPtr(collisionRootNode), collisionRootNode, noDebugObjects);
+        return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
+    }
 
+    public ISceneNode getSceneNodeAndCollisionPointFromRay(line3df ray, vector3df outCollisionPoint, triangle3df outTriangle, int idBitMask, ISceneNode collisionRootNode) {
+        long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeAndCollisionPointFromRay__SWIG_1(swigCPtr, this, line3df.getCPtr(ray), ray, vector3df.getCPtr(outCollisionPoint), outCollisionPoint, triangle3df.getCPtr(outTriangle), outTriangle, idBitMask, ISceneNode.getCPtr(collisionRootNode), collisionRootNode);
+        return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
+    }
+
+    public ISceneNode getSceneNodeAndCollisionPointFromRay(line3df ray, vector3df outCollisionPoint, triangle3df outTriangle, int idBitMask) {
+        long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeAndCollisionPointFromRay__SWIG_2(swigCPtr, this, line3df.getCPtr(ray), ray, vector3df.getCPtr(outCollisionPoint), outCollisionPoint, triangle3df.getCPtr(outTriangle), outTriangle, idBitMask);
+        return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
+    }
+
+    public ISceneNode getSceneNodeAndCollisionPointFromRay(line3df ray, vector3df outCollisionPoint, triangle3df outTriangle) {
+        long cPtr = JirrJNI.ISceneCollisionManager_getSceneNodeAndCollisionPointFromRay__SWIG_3(swigCPtr, this, line3df.getCPtr(ray), ray, vector3df.getCPtr(outCollisionPoint), outCollisionPoint, triangle3df.getCPtr(outTriangle), outTriangle);
+        return (cPtr == 0) ? null : new ISceneNode(cPtr, false);
+    }
 }
