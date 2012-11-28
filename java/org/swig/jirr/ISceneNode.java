@@ -255,6 +255,10 @@ public class ISceneNode extends IAttributeExchangingObject {
             JirrJNI.ISceneNode_setRotationSwigExplicitISceneNode(swigCPtr, this, vector3df.getCPtr(rotation), rotation);
         }
   }
+  
+  public void setRotationLocal(vector3df rotation) {
+    JirrJNI.ISceneNode_setLocalRotation(swigCPtr, vector3df.getCPtr(rotation));
+  }
 
   public vector3df getPosition() {
     return new vector3df((getClass() == ISceneNode.class) ? JirrJNI.ISceneNode_getPosition(swigCPtr, this) : JirrJNI.ISceneNode_getPositionSwigExplicitISceneNode(swigCPtr, this), false);
