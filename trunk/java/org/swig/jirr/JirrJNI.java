@@ -1186,6 +1186,7 @@ public class JirrJNI {
   public final static native void ISceneNode_setScale(long jarg1, ISceneNode jarg1_, long jarg2, vector3df jarg2_);
   public final static native void ISceneNode_setScaleSwigExplicitISceneNode(long jarg1, ISceneNode jarg1_, long jarg2, vector3df jarg2_);
   public final static native long ISceneNode_getRotation(long jarg1, ISceneNode jarg1_);
+  public final static native void ISceneNode_setLocalRotation(long nodePointer, long vectorPointer);
   public final static native long ISceneNode_getRotationSwigExplicitISceneNode(long jarg1, ISceneNode jarg1_);
   public final static native void ISceneNode_setRotation(long jarg1, ISceneNode jarg1_, long jarg2, vector3df jarg2_);
   public final static native void ISceneNode_setRotationSwigExplicitISceneNode(long jarg1, ISceneNode jarg1_, long jarg2, vector3df jarg2_);
