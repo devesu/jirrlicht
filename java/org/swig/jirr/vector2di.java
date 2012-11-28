@@ -268,4 +268,8 @@ public class vector2di {
     return JirrJNI.vector2di_Y_get(swigCPtr, this);
   }
 
+    @Override
+    public String toString() {
+        return "X="+getX()+" Y="+getY();
+    }
 }

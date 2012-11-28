@@ -63,6 +63,10 @@ public class IVideoDriver {
     return JirrJNI.IVideoDriver_endScene(swigCPtr, this);
   }
 
+  public void setTransformationAsInNode(ISceneNode node){
+      JirrJNI.IVideoDriver_setTransformationAsInNode(swigCPtr, ISceneNode.getCPtr(node));
+  }
+  
   public void resetTransformMatrix(){
       JirrJNI.IVideoDriver_resetTransformMatrix(swigCPtr);
   }
