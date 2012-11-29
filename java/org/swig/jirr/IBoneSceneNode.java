@@ -8,18 +8,18 @@
 
 package org.swig.jirr;
 
-public class SWIGTYPE_p_IBoneSceneNode {
+public class IBoneSceneNode {
   private long swigCPtr;
 
-  protected SWIGTYPE_p_IBoneSceneNode(long cPtr, boolean futureUse) {
+  protected IBoneSceneNode(long cPtr, boolean futureUse) {
     swigCPtr = cPtr;
   }
 
-  protected SWIGTYPE_p_IBoneSceneNode() {
+  protected IBoneSceneNode() {
     swigCPtr = 0;
   }
 
-  protected static long getCPtr(SWIGTYPE_p_IBoneSceneNode obj) {
+  protected static long getCPtr(IBoneSceneNode obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }

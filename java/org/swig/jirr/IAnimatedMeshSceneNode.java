@@ -76,14 +76,14 @@ public class IAnimatedMeshSceneNode extends ISceneNode {
     return (cPtr == 0) ? null : new IShadowVolumeSceneNode(cPtr, false);
   }
 
-  public SWIGTYPE_p_IBoneSceneNode getJointNode(String jointName) {
+  public IBoneSceneNode getJointNode(String jointName) {
     long cPtr = JirrJNI.IAnimatedMeshSceneNode_getJointNode__SWIG_0(swigCPtr, this, jointName);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_IBoneSceneNode(cPtr, false);
+    return (cPtr == 0) ? null : new IBoneSceneNode(cPtr, false);
   }
 
-  public SWIGTYPE_p_IBoneSceneNode getJointNode(long jointID) {
+  public IBoneSceneNode getJointNode(long jointID) {
     long cPtr = JirrJNI.IAnimatedMeshSceneNode_getJointNode__SWIG_1(swigCPtr, this, jointID);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_IBoneSceneNode(cPtr, false);
+    return (cPtr == 0) ? null : new IBoneSceneNode(cPtr, false);
   }
 
   public long getJointCount() {
