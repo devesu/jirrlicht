@@ -9,7 +9,7 @@
 package org.swig.jirr;
 
 public class ISceneNode extends IAttributeExchangingObject {
-  private long swigCPtr;
+  protected long swigCPtr;
 
   protected ISceneNode(long cPtr, boolean cMemoryOwn) {
     super(JirrJNI.ISceneNode_SWIGUpcast(cPtr), cMemoryOwn);
