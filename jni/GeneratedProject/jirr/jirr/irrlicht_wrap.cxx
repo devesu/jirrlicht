@@ -28342,6 +28342,7 @@ SWIGEXPORT jlong JNICALL Java_org_swig_jirr_JirrJNI_IAnimatedMeshSceneNode_1getJ
   irr::c8 *arg2 = (irr::c8 *) 0 ;
   IBoneSceneNode *result = 0 ;
   
+  
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
