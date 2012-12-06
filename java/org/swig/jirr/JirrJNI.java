@@ -478,8 +478,8 @@ public class JirrJNI {
   public final static native void SMaterial_setTextureMatrix(long jarg1, SMaterial jarg1_, long jarg2, long jarg3);
   public final static native long SMaterial_getTexture(long jarg1, SMaterial jarg1_, long jarg2);
   public final static native void SMaterial_setTexture__SWIG_0(long jarg1, SMaterial jarg1_, long jarg2, long jarg3, ITexture jarg3_);
-  public final static native void SMaterial_setFlag(long jarg1, SMaterial jarg1_, long jarg2, boolean jarg3);
-  public final static native boolean SMaterial_getFlag(long jarg1, SMaterial jarg1_, long jarg2);
+  public final static native void SMaterial_setFlag(long materialPointer, long flagNumber, boolean flagState);
+  public final static native boolean SMaterial_getFlag(long materialPointer, long flagNumber);
   public final static native boolean SMaterial_notEqualsOperator(long jarg1, SMaterial jarg1_, long jarg2, SMaterial jarg2_);
   public final static native boolean SMaterial_equalsOperator(long jarg1, SMaterial jarg1_, long jarg2, SMaterial jarg2_);
   public final static native boolean SMaterial_isTransparent(long jarg1, SMaterial jarg1_);
