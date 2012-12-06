@@ -7,6 +7,7 @@
  * ----------------------------------------------------------------------------- */
 package org.swig.jirr;
 
+import java.awt.Color;
 
 public class SColor {
 
@@ -18,11 +19,9 @@ public class SColor {
     public static final SColor GRAY = new SColor(255, 127, 127, 127);
     public static final SColor GRAY_L = new SColor(255, 200, 200, 200);
     public static final SColor BLACK = new SColor(255, 0, 0, 0);
-    
     public static final SColor RED_L = new SColor(255, 255, 127, 127);
     public static final SColor GREEN_L = new SColor(255, 127, 255, 127);
     public static final SColor BLUE_L = new SColor(255, 127, 127, 255);
-    
     private long swigCPtr;
     protected boolean swigCMemOwn;
 
@@ -30,9 +29,9 @@ public class SColor {
         swigCMemOwn = cMemoryOwn;
         swigCPtr = cPtr;
     }
-    
-    public static SColor randomColor(){
-        return new SColor(255,(int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
+
+    public static SColor randomColor() {
+        return new SColor(255, (int) (Math.random() * 255), (int) (Math.random() * 255), (int) (Math.random() * 255));
     }
 
     protected static long getCPtr(SColor obj) {
@@ -75,6 +74,10 @@ public class SColor {
 
     public SColor(long a, long r, long g, long b) {
         this(JirrJNI.new_SColor__SWIG_1(a, r, g, b), true);
+    }
+
+    public SColor(Color color) {
+        this(JirrJNI.new_SColor__SWIG_1(color.getAlpha(), color.getRed(), color.getGreen(), color.getBlue()), true);
     }
 
     public SColor(long clr) {
@@ -179,5 +182,13 @@ public class SColor {
 
     public long getColor() {
         return JirrJNI.SColor_color_get(swigCPtr, this);
+    }
+
+    public Color getJavaColor() {
+        float r = getRed() / 255.0f;
+        float g = getGreen() / 255.0f;
+        float b = getBlue() / 255.0f;
+        float a = getAlpha() / 255.0f;
+        return new Color(r, g, b, a);
     }
 }
