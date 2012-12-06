@@ -317,13 +317,13 @@ public class SMaterial {
         return this;
     }
 
-    public SMaterial setFlag(SWIGTYPE_p_E_MATERIAL_FLAG flag, boolean value) {
-        JirrJNI.SMaterial_setFlag(swigCPtr, this, SWIGTYPE_p_E_MATERIAL_FLAG.getCPtr(flag), value);
+    public SMaterial setFlag(MATERIAL_FLAG flag, boolean value) {
+        JirrJNI.SMaterial_setFlag(swigCPtr, flag.getCPtr(), value);
         return this;
     }
 
-    public boolean getFlag(SWIGTYPE_p_E_MATERIAL_FLAG flag) {
-        return JirrJNI.SMaterial_getFlag(swigCPtr, this, SWIGTYPE_p_E_MATERIAL_FLAG.getCPtr(flag));
+    public boolean getFlag(MATERIAL_FLAG flag) {
+        return JirrJNI.SMaterial_getFlag(swigCPtr, flag.getCPtr());
     }
 
     public boolean notEqualsOperator(SMaterial b) {
