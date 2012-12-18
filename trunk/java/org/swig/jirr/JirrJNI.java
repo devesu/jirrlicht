@@ -1208,6 +1208,7 @@ public class JirrJNI {
   public final static native boolean ISceneNode_isDebugObject(long jarg1, ISceneNode jarg1_);
   public final static native long ISceneNode_getChildren(long jarg1, ISceneNode jarg1_);
   public final static native void ISceneNode_setParent(long jarg1, ISceneNode jarg1_, long jarg2, ISceneNode jarg2_);
+  public final static native void ISceneNode_dynamicParent(long parentPointer,long childPointer);
   public final static native void ISceneNode_setParentSwigExplicitISceneNode(long jarg1, ISceneNode jarg1_, long jarg2, ISceneNode jarg2_);
   public final static native long ISceneNode_getTriangleSelector(long jarg1, ISceneNode jarg1_);
   public final static native void ISceneNode_setTriangleSelector(long jarg1, ISceneNode jarg1_, long jarg2, ITriangleSelector jarg2_);
