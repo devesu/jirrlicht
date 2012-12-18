@@ -326,7 +326,7 @@ public class ISceneNode extends IAttributeExchangingObject {
         }
   }
   public void setDynamicParent(ISceneNode newParent) {
-    JirrJNI.ISceneNode_dynamicParent(swigCPtr, ISceneNode.getCPtr(newParent));
+    JirrJNI.ISceneNode_dynamicParent(ISceneNode.getCPtr(newParent),swigCPtr);
   }
 
   public ITriangleSelector getTriangleSelector() {
