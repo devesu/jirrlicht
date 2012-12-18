@@ -10577,47 +10577,18 @@ SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_SMaterial_1setTexture_1_1SWIG
 }
 
 
-SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_SMaterial_1setFlag(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jboolean jarg3) {
-  irr::video::SMaterial *arg1 = (irr::video::SMaterial *) 0 ;
-  E_MATERIAL_FLAG arg2 ;
-  bool arg3 ;
-  E_MATERIAL_FLAG *argp2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(irr::video::SMaterial **)&jarg1; 
-  argp2 = *(E_MATERIAL_FLAG **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null E_MATERIAL_FLAG");
-    return ;
-  }
-  arg2 = *argp2; 
-  arg3 = jarg3 ? true : false; 
-  (arg1)->setFlag(arg2,arg3);
+SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_SMaterial_1setFlag(JNIEnv *jenv, jclass jcls, jlong materialPointer, jlong flagNumber, jboolean flagState) {
+	E_MATERIAL_FLAG flag=(E_MATERIAL_FLAG)flagNumber;
+	irr::video::SMaterial *material=(irr::video::SMaterial *)materialPointer;
+	material->setFlag(flag, flagState);
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_swig_jirr_JirrJNI_SMaterial_1getFlag(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
-  jboolean jresult = 0 ;
-  irr::video::SMaterial *arg1 = (irr::video::SMaterial *) 0 ;
-  E_MATERIAL_FLAG arg2 ;
-  E_MATERIAL_FLAG *argp2 ;
-  bool result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(irr::video::SMaterial **)&jarg1; 
-  argp2 = *(E_MATERIAL_FLAG **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null E_MATERIAL_FLAG");
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (bool)((irr::video::SMaterial const *)arg1)->getFlag(arg2);
-  jresult = (jboolean)result; 
-  return jresult;
+SWIGEXPORT jboolean JNICALL Java_org_swig_jirr_JirrJNI_SMaterial_1getFlag(JNIEnv *jenv, jclass jcls, jlong materialPointer, jlong flagNumber) {
+	E_MATERIAL_FLAG flag=(E_MATERIAL_FLAG)flagNumber;
+	const irr::video::SMaterial *material=(irr::video::SMaterial const *)materialPointer;
+	jboolean result = material->getFlag(flag);
+	return result;
 }
 
 
@@ -50567,6 +50538,22 @@ SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_IVideoDriver_1setTransformati
 		driver->setTransform(ETS_WORLD, transform);
 	}
 }
+
+//my function
+SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_ISceneNode_1dynamicParent(JNIEnv *jenv, jclass jcls, jlong parentPointer, jlong childPointer) {
+	ISceneNode*parent=(ISceneNode*)parentPointer;
+	ISceneNode*child=(ISceneNode*)childPointer;
+
+	core::matrix4 m(core::matrix4::EM4CONST_NOTHING);
+    parent->getAbsoluteTransformation().getInverse(m); 
+    m *= child->getAbsoluteTransformation();
+    child->setPosition(m.getTranslation());
+    child->setRotation(m.getRotationDegrees());
+    child->setScale(m.getScale());
+    child->setParent(parent);
+}
+
+
 
 SWIGEXPORT void JNICALL Java_org_swig_jirr_JirrJNI_IVideoDriver_1resetTransformMatrix(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   irr::video::IVideoDriver *driver = (irr::video::IVideoDriver *)  jarg1;
